@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SINK=`pacmd list-sinks | grep -n "* index: " | grep -Eo '^[^:]+'`
+SINK="$(($SINK + 7))p"
+LINE=`pacmd list-sinks | sed -n $SINK | grep -oP '\d+(?:\.\d+)?%'`
+SPLIT=$(echo $LINE | tr " " "\n")
+
+for S in $SPLIT
+do
+	echo $S
+	exit
+done

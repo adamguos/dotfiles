@@ -1,1 +1,10 @@
 #!/bin/bash
+
+mkdir -p .config/i3 && cp -rf ~/.config/i3 .config/
+mkdir -p .config/polybar && cp -rf ~/.config/polybar .config/
+mkdir -p etc/fonts && cp -f /etc/fonts/local.conf etc/fonts/
+cp -rf ~/Pictures ./
+cp -f ~/.bashrc ./
+cp -f ~/.nanorc ./
+cp -f ~/.xinitrc ./
+cp -f ~/.Xresources ./

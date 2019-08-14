@@ -1,0 +1,24 @@
+#!/bin/bash
+
+CURSINK=`pacmd list-sinks | grep "* index: " | cut -b 12-`
+SINKS=`pacmd list-sinks | grep "index: " | cut -b 12-`
+
+SPLIT=$(echo $SINKS | tr " " "\n")
+
+FOUND=false
+SINK=${SPLIT:0:1}
+
+for S in $SPLIT
+do
+	if [ "$FOUND" = true ]; then
+		SINK=$S
+	fi
+	if [[ $S == $CURSINK ]]; then
+		FOUND=true
+	fi
+done
+
+for INPUT in `pacmd list-sink-inputs | grep "index: " | cut -b 12-`
+do
+	pacmd set-default-sink $SINK & pacmd move-sink-input $INPUT $SINK
+done
