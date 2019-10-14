@@ -1,0 +1,3 @@
+#!/bin/bash
+
+firefox "/home/adam/Downloads/FF12 Red Scarlet.txt"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+firefox "/home/adam/Documents/EA10/EA10_Amended_Syllabus_SEPT26.pdf"
