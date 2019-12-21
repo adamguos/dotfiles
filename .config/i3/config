@@ -13,7 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 9
+# font pango:monospace 9
+font pango:sans serif 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -172,16 +173,32 @@ for_window [class="Thunar"] resize set 840 540
 #for_window [class="URxvt"] resize set 640 480
 
 # Hide window title bars
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 4
 gaps outer 0
 
+set_from_resource $foreground foreground #ffffff
+set_from_resource $background background #000000
+
 # Set window colours
 # class					border	backgr.	text	indicator	child_border
-client.focused			#f3f4f5	#f3f4f5	#ffffff	#555555		#f3f4f5
+client.focused		$foreground	$foreground	$background	#292d2e		#747c84
 client.focused_inactive	#747c84	#747c84	#ffffff	#484e50		#747c84
-client.unfocused		#747c84	#747c84	#888888	#292d2e		#747c84
+client.unfocused			$foreground	$background	#f0f0f0	#555555		$foreground
 client.urgent			#2f343a	#900000	#ffffff	#900000		#900000
+
+bar {
+	status_command i3status
+
+	colors {
+		background $background
+		statusline #f0f0f0
+
+		# class border background text
+		focused_workspace	$foreground $foreground #000000
+		inactive_workspace	$background $background $foreground
+	}
+}
 
 # Apply .Xresource
 exec_always --no-startup-id xrdb ~/.Xresources
@@ -212,7 +229,7 @@ bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
 # Autostart programs
 exec ~/.fehbg &
 exec --no-startup-id compton &
-exec --no-startup-id ~/.config/polybar/polybar.sh &
+#exec --no-startup-id ~/.config/polybar/polybar.sh &
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 exec udiskie --tray &
