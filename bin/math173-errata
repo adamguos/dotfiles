@@ -1,0 +1,3 @@
+#!/bin/bash
+
+zathura ~/Documents/MATH173/errata.pdf

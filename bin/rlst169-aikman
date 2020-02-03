@@ -1,0 +1,3 @@
+#!/bin/bash
+
+zathura ~/Documents/RLST169/aikman.pdf

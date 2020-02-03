@@ -1,0 +1,3 @@
+#!/bin/bash
+
+zathura Documents/CSCI101/rich.pdf
