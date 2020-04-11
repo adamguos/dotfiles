@@ -1,11 +1,11 @@
 #!/bin/bash
 
-mkdir -p .config/i3 && cp -rf ~/.config/i3 .config/
-mkdir -p .config/polybar && cp -rf ~/.config/polybar .config/
-mkdir -p etc/fonts && cp -f /etc/fonts/local.conf etc/fonts/
-cp -rf ~/Pictures ./
-cp -rf /usr/local/bin ./
-cp -f ~/.bashrc ./
-cp -f ~/.nanorc ./
-cp -f ~/.xinitrc ./
-cp -f ~/.Xresources ./
+mkdir -p .config/i3 && cp -rf /mnt/arch/home/adam/.config/i3 .config/
+mkdir -p .config/polybar && cp -rf /mnt/arch/home/adam/.config/polybar .config/
+mkdir -p etc/fonts && cp -f /mnt/arch/etc/fonts/local.conf etc/fonts/
+cp -rf /mnt/arch/home/adam/Pictures ./
+cp -rf /mnt/arch/usr/local/bin ./
+cp -f /mnt/arch/home/adam/.bashrc ./
+cp -f /mnt/arch/home/adam/.nanorc ./
+cp -f /mnt/arch/home/adam/.xinitrc ./
+cp -f /mnt/arch/home/adam/.Xresources ./
