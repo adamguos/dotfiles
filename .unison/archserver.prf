@@ -1,0 +1,16 @@
+# Roots of the synchronization
+root = /home/adam/Documents
+root = ssh://acousticwheels.duckdns.org:24601//mnt/storage/Documents
+
+# Keep a backup copy of every file in a central location
+backuplocation = central
+backupdir = /home/adam/.unison/backups
+backup = Name *
+backupprefix = $VERSION.
+backupsuffix = 
+
+# Use this command for displaying diffs
+diff = diff -y -W 79 --suppress-common-lines
+
+# Log actions to the terminal
+log = true
