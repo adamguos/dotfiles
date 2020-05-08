@@ -1,32 +1,17 @@
-!*.font: xft:InputMono:size=10
-
 URxvt.termName:		rxvt-256color
 URxvt.scrollBar:	false
 URxvt.internalBorder:	10
 URxvt.lineSpace:	1
-!URxvt.letterSpace:	-1
-URxvt.font:		xft:monospace:size=10
+!URxvt.letterSpace:	-2
+URxvt.font:		xft:monospace:size=11
 
 ! Colours
+*background:	#2E3440
+*midground:	#898690
+*foreground:	#E5E9F0
 
-!*background: #282828
-*background: #2e3440
-!*background: #2b2b2b
-!*foreground: #ebdbb2
-*foreground: #d8dee9
+! green
+*color10:	#A3BE8C
 
-!*color3: #ef6d82
-*color3: #8fbcbb
-
-!i3status.statusline: #f0c674
-!i3status.statusline: #31c1a6
-i3status.statusline: #88c0d0
-!i3status.statusline: #add8e6
-!i3status.statusline: #ebdbb2
-i3status.inactiveText: #999999
-i3status.activeText: #434c5e
-
-URxvt.keysym.Control-Up:     \033[1;5A
-URxvt.keysym.Control-Down:   \033[1;5B
-URxvt.keysym.Control-Left:   \033[1;5D
-URxvt.keysym.Control-Right:  \033[1;5C
+! blue
+*color12:	#81A1C1

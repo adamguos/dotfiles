@@ -2,10 +2,9 @@
 
 mkdir -p .config/i3 && cp -rf ~/.config/i3 .config/
 mkdir -p .config/polybar && cp -rf ~/.config/polybar .config/
+mkdir -p .config/fontconfig && cp -rf ~/.config/fontconfig .config/
 mkdir -p etc/fonts && cp -f /etc/fonts/local.conf etc/fonts/
-mkdir -p .unison && cp -f ~/.unison/archserver.prf
 cp -rf ~/Pictures ./
-cp -rf /usr/local/bin ./
 cp -f ~/.bashrc ./
 cp -f ~/.nanorc ./
 cp -f ~/.xinitrc ./
