@@ -213,3 +213,4 @@ exec xset r rate 250 45
 exec nitrogen --restore &
 exec gnome-settings-daemon
 exec udiskie --tray &
+exec compton &
