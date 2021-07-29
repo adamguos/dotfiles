@@ -9,6 +9,14 @@ for file in dotfiles:
     if file == "copy.py":
         continue
 
+    while True:
+        res = input(f"Copy {file}? (y/n) ")
+        if res == "y" or res == "n":
+            break
+
+    if res == "n":
+        continue
+
     f = open(file, "r")
     lines = f.readlines()
 
