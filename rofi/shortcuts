@@ -1,0 +1,5 @@
+#!/bin/bash
+# ~/.config/rofi/shortcuts
+
+chosen=$(ls -1 ~/dotfiles/shortcuts | dmenu=1 ~/.config/dmenu/dmenurc)
+xdg-open `cat ~/dotfiles/shortcuts/$chosen`

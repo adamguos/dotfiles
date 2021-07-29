@@ -1,0 +1,5 @@
+; ~/.config/flake8
+
+[flake8]
+ignore = E402, E741, F401, W504
+max-line-length = 100

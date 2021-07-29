@@ -1,0 +1,4 @@
+; ~/.config/yapf/style
+
+[style]
+column_limit = 100
