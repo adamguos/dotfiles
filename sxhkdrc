@@ -12,10 +12,6 @@ super + Return
 super + @space
     rofi -show run
 
-# other dmenu scripts
-super + shift + Delete
-    ~/.config/rofi/power
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -36,14 +32,27 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     light -U 5
 
+# other dmenu scripts
+super + shift + Delete
+    ~/.config/rofi/power
+
 super + shift + s
     maim -s | xclip -sel c -t image/png
 
 super + shift + f
     ~/.config/rofi/search
 
-super + Escape
-    ~/.config/rofi/power
+super + alt + s
+    ~/.config/rofi/shortcuts
+
+super + ctrl + s
+    ~/.config/rofi/save_scrot
+
+super + alt + minus
+    xinput set-prop 11 "Device Enabled" 0
+
+super + alt + equal
+    xinput set-prop 11 "Device Enabled" 1
 
 #
 # bspwm hotkeys
@@ -141,11 +150,11 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	bspc node -z {left -100 0,bottom 0 100,top 0 -100,right 100 0}
+	bspc node -z {left -50 0,bottom 0 50,top 0 -50,right 50 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-	bspc node -z {right -100 0,top 0 100,bottom 0 -100,left 100 0}
+	bspc node -z {right -50 0,top 0 50,bottom 0 -50,left 50 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}

@@ -16,6 +16,6 @@ bspc config gapless_monocle     true
 bspc rule -a Zathura state=tiled
 
 xset r rate 250 45
-feh --randomize --bg-fill ~/Pictures/bulksplash/*
+# feh --randomize --bg-fill /mnt/windows/Users/Adam/Pictures/bulksplash/*
+feh --bg-fill /mnt/windows/Users/Adam/Pictures/bulksplash/bulksplash-ch49man-Mk3xat_IX-g.jpg
 ~/.config/polybar/launch.sh --blocks
-picom &

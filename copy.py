@@ -2,20 +2,26 @@ import glob
 import os
 
 dotfiles = glob.glob("**/*", recursive=True)
+copy_all = False
 
 for file in dotfiles:
     if not os.path.isfile(file):
         continue
     if file == "copy.py":
         continue
-
-    while True:
-        res = input(f"Copy {file}? (y/n) ")
-        if res == "y" or res == "n":
-            break
-
-    if res == "n":
+    if " " in file:
         continue
+
+    if not copy_all:
+        while True:
+            res = input(f"Copy {file}? (y/n/a) ")
+            if res == "y" or res == "n" or res == "a":
+                break
+
+        if res == "n":
+            continue
+        if res == "a":
+            copy_all = True
 
     f = open(file, "r")
     lines = f.readlines()
