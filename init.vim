@@ -23,7 +23,7 @@ let g:ale_fixers={'python': ['yapf']}
 let g:ale_linters={'python': ['flake8']}
 nnoremap <C-I> :ALEFix<CR>
 
-nnoremap <C-O> :!pandoc % --pdf-engine=xelatex -o %:r.pdf<CR>
+nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
 
 let g:netrw_banner=0
 let g:netrw_browse_split=4
