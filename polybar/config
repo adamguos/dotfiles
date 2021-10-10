@@ -181,7 +181,7 @@ label-padding = 2
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume-padding = 3
+format-volume-padding = 2
 format-volume = <ramp-volume><label-volume>
 label-volume = %percentage:4:4%%
 use-ui-max = false

@@ -23,6 +23,6 @@ autoload -Uz compinit
 compinit
 
 # Aliases
-alias l='ls -l'
+alias l='ls -lh'
 
 EDITOR=nvim

@@ -1,8 +1,13 @@
 import glob
 import os
+import sys
 
-dotfiles = glob.glob("**/*", recursive=True)
-copy_all = False
+if len(sys.argv) > 1:
+    dotfiles = sys.argv[1:]
+    copy_all = True
+else:
+    dotfiles = glob.glob("**/*", recursive=True)
+    copy_all = False
 
 for file in dotfiles:
     if not os.path.isfile(file):
@@ -26,15 +31,19 @@ for file in dotfiles:
     f = open(file, "r")
     lines = f.readlines()
 
-    if lines[0][1] == "!":
+    if lines[0][1] in ["!", "?"]:
         line = lines[1]
     else:
         line = lines[0]
 
     path = line.strip()
     path = path[path.index(" ") + 1:]
+    if " " in path:
+        path = path[:path.index(" ")]
     pathdir = "/".join(path.split("/")[:-1])
 
-    print("copying:", file, "->", path)
+    # print("copying:", file, "->", path)
+    print("creating symlink:", file, "->", path)
     os.system(f"mkdir -p {pathdir}")
-    os.system(f"cp {file} {path}")
+    # os.system(f"cp {file} {path}")
+    os.system(f"ln -sf `pwd`/{file} {path}")

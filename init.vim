@@ -16,14 +16,17 @@ colorscheme delek
 
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 call plug#end()
 
 let g:ale_fixers={'python': ['yapf']}
-let g:ale_linters={'python': ['flake8']}
+let g:ale_linters={'python': ['flake8'], 'tex': []}
 nnoremap <C-I> :ALEFix<CR>
 
-nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
+autocmd FileType markdown nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
+autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv && pdflatex "%" && bibtex "%:r.aux" && pdflatex "%" && pdflatex "%" && ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv<CR>
+autocmd FileType markdown nnoremap <C-P> :!xdg-open "%:r.pdf" &<CR>
+autocmd FileType tex nnoremap <C-P> :!xdg-open "%:r.pdf" &<CR>
 
 let g:netrw_banner=0
 let g:netrw_browse_split=4
