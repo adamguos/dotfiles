@@ -18,6 +18,7 @@
 #xfce-mcs-manager &
 
 xset r rate 250 45 &
-feh --randomize --bg-scale $mh/Pictures/bulksplash/*
+feh --randomize --bg-fill $mh/Pictures/bulksplash/*
 tint2 &
 nm-applet &
+xrandr --output HDMI-1 --same-as eDP-1

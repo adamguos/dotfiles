@@ -24,7 +24,8 @@ let g:ale_linters={'python': ['flake8'], 'tex': []}
 nnoremap <C-I> :ALEFix<CR>
 
 autocmd FileType markdown nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
-autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv && pdflatex "%" && bibtex "%:r.aux" && pdflatex "%" && pdflatex "%" && ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv<CR>
+" autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv; pdflatex "%"; bibtex "%:r.aux"; pdflatex "%"; pdflatex "%"; ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv<CR>
+autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv; pdflatex "%:r"; biber "%:r"; pdflatex "%:r"; ls -1 \| grep "%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv<CR>
 autocmd FileType markdown nnoremap <C-P> :!xdg-open "%:r.pdf" &<CR>
 autocmd FileType tex nnoremap <C-P> :!xdg-open "%:r.pdf" &<CR>
 
