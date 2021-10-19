@@ -34,7 +34,3 @@ bindkey  "^[[F"   end-of-line
 
 # Aliases
 alias l='ls -lh'
-
-# Env vars
-export mh=/mnt/manjaro/home/adam
-export sh=/mnt/solus/home/adam
