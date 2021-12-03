@@ -1,10 +1,23 @@
-#!/bin/sh
+#!/bin/bash
 # ~/.config/bspwm/bspwmrc
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xrandr --output HDMI-1 --same-as eDP-1
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+if [[ $(xrandr | grep 'HDMI1') == *'disconnected'* ]]; then
+    echo 'disconnected'
+    xrandr --output HDMI1 --off
+    bspc monitor eDP1 -d 1 2 3 4
+else
+    echo 'connected'
+    xrandr --output HDMI1 --right-of eDP1 --auto
+    bspc monitor eDP1 -d 1 2 3 4
+    bspc monitor HDMI1 -d 5 6 7 8
+fi
+
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+
+# bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width        2
 bspc config window_gap          0
@@ -19,8 +32,10 @@ bspc rule -a zoom state=floating
 
 xset r rate 250 45
 # feh --randomize --bg-fill ~/Pictures/bulksplash/*
-feh --bg-fill ~/Pictures/bulksplash/bulksplash-ruslanbardash-WMSvsWzhM0g.jpg
-~/.config/polybar/launch.sh
+feh --bg-fill ~/Pictures/PXL_20211110_005839508.jpg
+# ~/.config/polybar/material/scripts/random.sh
+~/.config/polybar/launch.sh --material &
+killall nm-applet
+nm-applet &
+killall picom
 picom &
-killall nm-tray
-nm-tray &

@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.config/openbox/autostart
 #
 # These things are run when an Openbox X Session is started.
@@ -17,8 +18,17 @@
 #
 #xfce-mcs-manager &
 
-xset r rate 250 45 &
+if [[ $(xrandr | grep 'HDMI-1') == *'disconnected'* ]]; then
+    echo 'disconnected'
+    xrandr --output HDMI-1 --off
+else
+    echo 'connected'
+    xrandr --output HDMI-1 --right-of eDP-1 --auto
+fi
+
+xset r rate 250 45
 feh --randomize --bg-fill ~/Pictures/bulksplash/*
-tint2 &
+~/.config/polybar/material/scripts/random.sh
+~/.config/polybar/launch.sh --material &
+killall nm-applet
 nm-applet &
-xrandr --output HDMI-1 --same-as eDP-1

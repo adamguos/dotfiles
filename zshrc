@@ -33,4 +33,14 @@ bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 
 # Aliases
-alias l='ls -lh'
+alias l='exa -lh'
+alias xs='xset r rate 250 45'
+
+# Path
+export PATH=$PATH:~/.emacs.d/bin
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Fix RVM
+source ~/.rvm/scripts/rvm
