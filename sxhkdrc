@@ -23,6 +23,12 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
     pactl -- set-sink-volume @DEFAULT_SINK@ -5%
 
+super + equal
+    pactl -- set-sink-volume @DEFAULT_SINK@ +5%
+
+super + minus
+    pactl -- set-sink-volume @DEFAULT_SINK@ -5%
+
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
@@ -37,7 +43,7 @@ super + shift + Delete
     ~/.config/rofi/power
 
 super + shift + s
-    maim -s | xclip -sel c -t image/png
+    flameshot gui
 
 super + shift + f
     ~/.config/rofi/search
@@ -150,11 +156,11 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	bspc node -z {left -50 0,bottom 0 50,top 0 -50,right 50 0}
+	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-	bspc node -z {right -50 0,top 0 50,bottom 0 -50,left 50 0}
+	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
@@ -164,4 +170,10 @@ super + {Left,Down,Up,Right}
 super + alt + shift + {1-9}
     bspc node -f @parent; \
     bspc node -r 0.{1-9}; \
+    bspc node -f @first
+
+# nvim netrw ratio
+super + alt + shift + 0
+    bspc node -f @parent; \
+    bspc node -r 0.615; \
     bspc node -f @first

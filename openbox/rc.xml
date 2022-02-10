@@ -928,6 +928,7 @@
 
     # end of the example
 -->
+    <decor>no</decor>
 </applications>
 
 </openbox_config>

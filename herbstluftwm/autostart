@@ -187,13 +187,15 @@ hc keybind XF86MonBrightnessUp spawn light -A 5
 hc keybind XF86MonBrightnessDown spawn light -U 5
 
 hc keybind $Mod-Shift-Delete spawn ~/.config/rofi/power
-hc keybind $Mod-Shift-s spawn sh -c 'maim -s | xclip -sel c -t image/png'
+# hc keybind $Mod-Shift-s spawn sh -c 'maim -s | xclip -sel c -t image/png'
+hc keybind $Mod-Shift-s spawn flameshot gui
 hc keybind $Mod-Shift-f spawn ~/.config/rofi/search
 hc keybind $Mod-Mod1-s spawn ~/.config/rofi/shortcuts
 hc keybind $Mod-Control-s spawn ~/.config/rofi/save_scrot
+hc keybind $Mod-Control-Shift-s spawn flameshot screen -p ~/Pictures/
 
 xset r rate 250 45
-feh --bg-fill ~/Pictures/pixelmoon.png
+feh --bg-fill ~/Pictures/Xnwq5Pl.jpeg
 ~/.config/polybar/launch.sh --material &
 killall nm-applet
 nm-applet &
