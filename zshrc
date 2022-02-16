@@ -6,7 +6,7 @@ PROMPT="%F{red}%~ > %f"
 # zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-autoswitch-virtualenv
-source ~/.zsh/zsh-autoswitch-virtualenv/autoswitch_virtualenv.plugin.zsh
+# source ~/.zsh/zsh-autoswitch-virtualenv/autoswitch_virtualenv.plugin.zsh
 
 # Tab completion from the middle
 zstyle ':completion:*' completer _complete
@@ -31,11 +31,13 @@ export gcloud='instance-1.us-west2-a.golden-union-307007'
 # Path
 export PATH=$PATH:~/.emacs.d/bin
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Fix RVM
-source ~/.rvm/scripts/rvm
+if [ -d ~/.rvm ]
+then
+    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+    export PATH="$PATH:$HOME/.rvm/bin"
+    # Fix RVM
+    source ~/.rvm/scripts/rvm
+fi
 
 # Send SIGKILL to all processes with this name
 forcekill() {
