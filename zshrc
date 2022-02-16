@@ -26,6 +26,7 @@ bindkey  "^[[F"   end-of-line
 # Aliases
 alias l='exa -lh'
 alias xs='xset r rate 250 45'
+export gcloud='instance-1.us-west2-a.golden-union-307007'
 
 # Path
 export PATH=$PATH:~/.emacs.d/bin

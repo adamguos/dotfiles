@@ -29,33 +29,30 @@ foreground = ${xrdb:color15:#fff}
 ; |_.__/ \__,_|_|  |___/
 
 [bar/bar]
-enable-ipc=true
+enable-ipc = true
 height = 30
 
 background = ${colors.background}
 ;background = ${colors.primary}
 foreground = ${colors.foreground}
 
-padding=0
-font-0=Iosevka Nerd Font:size=11;3
-font-1=IPAGothic:size=12:antialias=true;3
+padding = 0
+font-0 = Iosevka Nerd Font:size=11;3
+font-1 = IPAGothic:size=12:antialias=true;3
 
 dpi = 100
 
-modules-left = bspwm
-; Spotify (scripts at github.com/dietervanhoof/polybar-spotify-controls)
-;modules-center = previous playpause next spotify
-; Mpd
-modules-center = time
-modules-right = wlan battery pulseaudio
+modules-left = bspwm time
+modules-center = polywins
+modules-right = wlan battery pulseaudio mixer bt
 
 padding-right = 1
 padding-left = 0
 
 module-margin = 1
-separator = %{F#666666}|%{F-}
+separator = %{F#777777}|%{F-}
 
-tray-position = right
+; tray-position = right
 
 scroll-up = bspwn-wsnext
 scroll-down = bspwn-wsprev
@@ -70,13 +67,31 @@ monitor = ${env:MONITOR:}
 ; | '_ ` _ \ / _ \ / _` | | | | |/ _ \/ __|
 ; | | | | | | (_) | (_| | |_| | |  __/\__ \
 ; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
+
+[module/polywins]
+type = custom/script
+exec = ~/.config/polybar/polywins.sh 2>/dev/null
+format = <label>
+label = %output%
+label-padding = 0
+tail = true
                                          
+[module/bt]
+type = custom/script
+exec = echo "bt"
+click-left = "blueman-manager"
+
+[module/mixer]
+type = custom/script
+exec = echo "mixer"
+click-left = "pavucontrol"
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:40:...%
 label-color1 = ${colors.foreground} 
 label-background = ${colors.background} 
-label-padding = 2
+;label-padding = 2
 
 [module/bspwm]
 type = internal/bspwm
@@ -87,15 +102,18 @@ index-sort = true
 enable-click = true
 reverse-scroll = false
 
-label-focused = 
-label-focused-padding = 1
+label-empty-foreground = #444444
+label-occupied-foreground = #999999
 
-label-occupied = 
-label-occupied-padding = 1
-
-
-label-empty = 
-label-empty-padding = 1
+;label-focused = 
+;label-focused-padding = 1
+;
+;label-occupied = 
+;label-occupied-padding = 1
+;
+;
+;label-empty = 
+;label-empty-padding = 1
 
 
 [module/mpd]
@@ -142,15 +160,15 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-
 ;format-connected =   <label-connected>
 format-connected = <label-connected>
-label-connected = %essid%
+;label-connected = %essid%
+label-connected = "%{A1:networkmanager_dmenu:}%essid%%{A}"
 label-connected-color1 = ${colors.foreground}
 
-format-disconnected =
+format-disconnected = <label-disconnected>
 ;format-disconnected = <label-disconnected>
-label-disconnected = %ifname% disconnected
+label-disconnected = "%{A1:networkmanager_dmenu:}disconnected%{A}"
 label-disconnected-color1 = ${colors.foreground}
 
 ramp-signal-0 = 
@@ -178,13 +196,13 @@ format-disconnected =
 [module/time]
 type = internal/date
 interval = 10
-format-padding = 3
+;format-padding = 3
 
 time = "%H:%M"
 date = "%A %d %b"
 
 label = %date%, %time%
-label-padding = 2
+;label-padding = 2
 
 
 [module/pulseaudio]
@@ -315,19 +333,21 @@ adapter = ADP0
 ;format-charging = <animation-charging> <label-charging>
 format-charging = charging <label-charging>
 ;label-charging = %percentage%% (%time%)
+;label-charging = %percentage%%
 label-charging = %percentage%%
 ;format-discharging = <ramp-capacity> <label-discharging>
 format-discharging = battery <label-discharging>
 ;label-discharging = %percentage%% (%time%)
 label-discharging = %percentage%%
-format-full = <label-full>
+format-full = battery <label-full>
+label-full = %percentage%%
 ;label-charging-underline = ${colors.tertiary}
 ;label-discharging-underline = ${colors.tertiary}
 
 
 format-charging-underline = ${colors.foreground}
 format-discharging-underline = ${colors.foreground}
-format-full-prefix = " "
+;format-full-prefix = " "
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
