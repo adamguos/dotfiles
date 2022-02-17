@@ -18,7 +18,7 @@ fi
 #I bspc config remove_unplugged_monitors true
 #I bspc config remove_disabled_monitors true
 
-bspc monitor -d 1 2 3 4
+bspc monitor -d 1 2 3 4 0
 
 bspc config border_width            2
 bspc config window_gap              0

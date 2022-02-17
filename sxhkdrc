@@ -128,7 +128,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '{1-9,10}'
+	bspc {desktop -f,node -d} '{1-9,0}'
 
 #
 # preselect
@@ -177,3 +177,7 @@ super + alt + shift + 0
     bspc node -f @parent; \
     bspc node -r 0.615; \
     bspc node -f @first
+
+# swap focused node with node in workspace 4, or move focused node to workspace 4
+super + n
+    [[ $(bspc query -N -d 0) ]] && bspc node -s $(bspc query -N -d 0) || bspc node -d 0
