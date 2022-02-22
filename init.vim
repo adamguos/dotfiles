@@ -23,6 +23,7 @@ call plug#end()
 
 let g:ale_fixers={'python': ['yapf']}
 let g:ale_linters={'python': ['flake8'], 'tex': []}
+let g:ale_python_flake8_options = '--max-line-length=100 --ignore=E402,E741,F401,W504,F841,E126,W503,E722,E266,E265'
 nnoremap <C-I> :ALEFix<CR>
 
 autocmd FileType markdown nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
