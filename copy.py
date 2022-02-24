@@ -31,7 +31,7 @@ for file in dotfiles:
     f = open(file, "r")
     lines = f.readlines()
 
-    if lines[0][1] in ["!", "?"]:
+    if lines[0][1] in ["!", "?"] and lines[0][0] not in ["<"]:
         line = lines[1]
     else:
         line = lines[0]
