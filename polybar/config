@@ -19,7 +19,7 @@
 
 [colors]
 
-background = #00000000
+background = #DD000000
 foreground = ${xrdb:color15:#fff}
 
 ;  _                    
