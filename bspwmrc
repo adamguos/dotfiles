@@ -20,7 +20,7 @@ fi
 
 bspc monitor -d 1 2 3 4 0
 
-bspc config border_width            2
+bspc config border_width            0
 bspc config window_gap              0
 bspc config top_padding             0
 bspc config bottom_padding          0

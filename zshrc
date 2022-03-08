@@ -29,16 +29,13 @@ alias xs='xset r rate 250 45'
 export gcloud='instance-1.us-west2-a.golden-union-307007'
 export EDITOR='nvim'
 
-# Path
-export PATH=$PATH:~/.emacs.d/bin
-
-if [ -d ~/.rvm ]
-then
-    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-    export PATH="$PATH:$HOME/.rvm/bin"
-    # Fix RVM
-    source ~/.rvm/scripts/rvm
-fi
+# if [ -d ~/.rvm ]
+# then
+#     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+#     export PATH="$PATH:$HOME/.rvm/bin"
+#     # Fix RVM
+#     source ~/.rvm/scripts/rvm
+# fi
 
 # Send SIGKILL to all processes with this name
 forcekill() {
@@ -60,9 +57,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-if [ -d ~/.nvm ]
-then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+# if [ -d ~/.nvm ]
+# then
+#     export NVM_DIR="$HOME/.nvm"
+#     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fi
