@@ -27,6 +27,7 @@ bindkey  "^[[F"   end-of-line
 alias l='exa -lh'
 alias xs='xset r rate 250 45'
 export gcloud='instance-1.us-west2-a.golden-union-307007'
+export EDITOR='nvim'
 
 # Path
 export PATH=$PATH:~/.emacs.d/bin

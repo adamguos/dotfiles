@@ -27,7 +27,8 @@ let g:ale_python_flake8_options = '--max-line-length=100 --ignore=E402,E741,F401
 nnoremap <C-I> :ALEFix<CR>
 
 autocmd FileType markdown nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
-autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "^%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv; pdflatex "%:r"; bibtex "%:r"; pdflatex "%:r"; pdflatex "%:r"; ls -1 \| grep "^%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv<CR>
+autocmd FileType tex nnoremap <C-O> :pdflatex "%:r"; bibtex "%:r"; pdflatex "%:r"; pdflatex "%:r"<CR>
+" autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "^%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv; pdflatex "%:r"; bibtex "%:r"; pdflatex "%:r"; pdflatex "%:r"; ls -1 \| grep "^%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" \| xargs rm -fv<CR>
 " autocmd FileType tex nnoremap <C-O> :!ls -1 \| grep "^%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" -e "\.bib" \| xargs rm -fv; pdflatex "%:r"; biber "%:r"; pdflatex "%:r"; pdflatex "%:r"; ls -1 \| grep "^%:r" \| grep -v -e "\.tex" -e "\.pdf" -e "\.md" -e "\.bib" \| xargs rm -fv<CR>
 " autocmd FileType tex nnoremap <C-O> :!latex "%:r"; bibtex "%:r"; latex "%:r"; latex "%:r"<CR>
 autocmd FileType markdown nnoremap <C-P> :!xdg-open "%:r.pdf" &<CR>
