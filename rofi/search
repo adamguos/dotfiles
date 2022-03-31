@@ -3,7 +3,7 @@
 
 # dir=$HOME/Documents
 # files=`find $dir -type f | cut -sd / -f 2-`
-cd $HOME/Documents
-files=`find . -type f | tail -n +2 | cut -c 3-`
+cd "$HOME/Documents" || exit
+files=$(find . -type f | tail -n +2 | cut -c 3-)
 chosen=$(echo -e "$files" | rofi -dmenu -i -p)
 [ -z "$chosen" ] || xdg-open "$HOME/Documents/$chosen"
