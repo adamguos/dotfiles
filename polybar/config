@@ -19,8 +19,11 @@
 
 [colors]
 
-background = #BB1E1E2E
-foreground = ${xrdb:color15:#fff}
+background = #001E1E2E
+foreground = #1E1E2E
+occupied = #881E1E2E
+empty = #221E1E2E
+separator = %{F#661E1E2E}|%{F-}
 
 ;  _                    
 ; | |__   __ _ _ __ ___ 
@@ -33,7 +36,6 @@ enable-ipc = true
 height = 30
 
 background = ${colors.background}
-;background = ${colors.primary}
 foreground = ${colors.foreground}
 
 padding = 0
@@ -51,7 +53,7 @@ padding-right = 1
 padding-left = 0
 
 module-margin = 1
-separator = %{F#777777}|%{F-}
+separator = ${colors.separator}
 
 ; tray-position = right
 
@@ -103,8 +105,8 @@ index-sort = true
 enable-click = true
 reverse-scroll = false
 
-label-empty-foreground = #444444
-label-occupied-foreground = #999999
+label-empty-foreground = ${colors.empty}
+label-occupied-foreground = ${colors.occupied}
 
 ;label-focused = 
 ;label-focused-padding = 1
