@@ -45,8 +45,8 @@ font-1 = IPAGothic:size=12:antialias=true;3
 
 dpi = 100
 
-modules-left = bspwm time
-modules-center = polywins
+modules-left = bspwm
+modules-center = time
 modules-right = wlan battery pulseaudio mixer bt
 
 padding-right = 1
