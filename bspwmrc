@@ -37,7 +37,6 @@ bspc config gapless_monocle         false
 bspc rule -a Zathura state=tiled
 bspc rule -a zoom state=floating
 
-xset r rate 250 45
 ~/.fehbg
 ~/.config/polybar/launch.sh --shades &
 # killall nm-applet
