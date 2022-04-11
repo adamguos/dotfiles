@@ -28,7 +28,8 @@ bspc config left_padding            0
 bspc config right_padding           0
 
 bspc config normal_border_color     '#4B4B4B'
-bspc config focused_border_color    '#bd93f9'
+bspc config focused_border_color    '#c1e1c1'
+# bspc config focused_border_color    '#bd93f9'
 
 bspc config split_ratio             0.5
 bspc config borderless_monocle      true
