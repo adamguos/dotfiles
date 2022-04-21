@@ -1,7 +1,7 @@
 # ~/.zshrc
 
 # zsh prompt
-PROMPT="%F{red}%~ > %f"
+PROMPT="%F{magenta}%~ > %f"
 
 # zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
