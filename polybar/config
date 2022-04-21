@@ -19,11 +19,16 @@
 
 [colors]
 
-background = #001E1E2E
-foreground = #1E1E2E
-occupied = #881E1E2E
-empty = #221E1E2E
-separator = %{F#661E1E2E}|%{F-}
+; background = #001E1E2E
+; foreground = #1E1E2E
+background = #2e3440
+foreground = #d8dee9
+; occupied = #881E1E2E
+occupied = #4c566a
+; empty = #221E1E2E
+empty = #2e3440
+; separator = %{F#661E1E2E}|%{F-}
+separator =
 
 ;  _                    
 ; | |__   __ _ _ __ ___ 
