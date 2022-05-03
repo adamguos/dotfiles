@@ -15,7 +15,7 @@ set textwidth=100
 set colorcolumn=100
 set formatoptions-=tc
 set signcolumn=yes
-highlight ColorColumn ctermbg=DarkGray
+highlight ColorColumn ctermbg=Black
 highlight SignColumn ctermbg=Black
 nnoremap <C-G> :g/./<Space>normal<Space>gqq<CR>
 
