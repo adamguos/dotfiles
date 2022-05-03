@@ -27,7 +27,7 @@ let g:ale_fixers={'python': ['yapf'], 'json': ['fixjson']}
 let g:ale_linters={'python': ['flake8'], 'tex': []}
 let g:ale_python_flake8_options = '--max-line-length=100 --ignore=E402,E741,F401,W504,E126,W503,E722,E266,E265,F841,E501'
 
-nnoremap <C-I> :ALEFix<CR>
+nnoremap <C-U> :ALEFix<CR>
 autocmd FileType markdown nnoremap <C-O> :!pandoc "%" --pdf-engine=xelatex -o "%:r.pdf"<CR>
 "autocmd FileType tex nnoremap <C-O> :!xelatex "%:r"; bibtex "%:r"; xelatex "%:r"; xelatex "%:r"<CR>
 autocmd FileType tex nnoremap <C-O> :!pdflatex "%:r"; bibtex "%:r"; pdflatex "%:r"; pdflatex "%:r"<CR>
