@@ -4,9 +4,11 @@
 PROMPT="%F{magenta}%~ > %f"
 
 # zsh-autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# zsh-autoswitch-virtualenv
-# source ~/.zsh/zsh-autoswitch-virtualenv/autoswitch_virtualenv.plugin.zsh
+if [ -d ~/.zsh/zsh-autosuggestions ]; then
+    source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ -d /usr/share/zsh/plugins/zsh-autosuggestions ]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # Tab completion from the middle
 zstyle ':completion:*' completer _complete
@@ -20,23 +22,12 @@ bindkey '5~' kill-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # Aliases
 alias l='exa -lh'
-alias xs='xset r rate 250 45'
-export gcloud='instance-1.us-west2-a.golden-union-307007'
 export EDITOR='nvim'
-alias dirs='dirs -v'
-
-# if [ -d ~/.rvm ]
-# then
-#     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#     export PATH="$PATH:$HOME/.rvm/bin"
-#     # Fix RVM
-#     source ~/.rvm/scripts/rvm
-# fi
 
 # Send SIGKILL to all processes with this name
 forcekill() {
@@ -57,10 +48,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# if [ -d ~/.nvm ]
-# then
-#     export NVM_DIR="$HOME/.nvm"
-#     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# fi
