@@ -19,14 +19,10 @@
 
 [colors]
 
-; background = #001E1E2E
-; foreground = #1E1E2E
-background = #2e3440
-foreground = #d8dee9
-; occupied = #881E1E2E
-occupied = #4c566a
-; empty = #221E1E2E
-empty = #2e3440
+background = #282a36
+foreground = #f8f8f2
+occupied = #6272a4
+empty = ${colors.background}
 ; separator = %{F#661E1E2E}|%{F-}
 separator =
 
