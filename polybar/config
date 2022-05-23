@@ -161,7 +161,8 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlo1
+;interface = wlo1
+interface-type = wireless
 interval = 3.0
 
 ;format-connected =   <label-connected>
