@@ -19,7 +19,7 @@
 
 [colors]
 
-background = #282a36
+background = #1e1e2e
 foreground = #f8f8f2
 occupied = #6272a4
 empty = ${colors.background}
