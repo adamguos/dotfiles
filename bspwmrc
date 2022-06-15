@@ -20,7 +20,7 @@ xrandr --output HDMI-1 --same-as eDP-1 --auto
 bspc monitor -d 1 2 3 4 5
 
 bspc config border_width            2
-bspc config window_gap              10
+bspc config window_gap              7
 bspc config top_padding             0
 bspc config bottom_padding          0
 bspc config left_padding            0
