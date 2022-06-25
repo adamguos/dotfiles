@@ -5,26 +5,28 @@ include-file = ~/.config/polybar/colors
 
 [bar/main]
 enable-ipc = true
-monitor = ${env:MONITOR:}
 
 height = 30
 width = 100%
-padding = 0
-
-radius = 0
+padding = 1
 
 background = ${color.BG}
 foreground = ${color.FG}
 
-font-0 = monospace:size=16;3
+font-0 = monospace:size=11;3
 font-1 = Iosevka Nerd Font Mono:size=24;6
 font-2 = Iosevka Nerd Font Mono:size=16;4
 
 modules-left = bspwm
 modules-right = wlan battery pulseaudio time bt
 
+module-margin = 1
+separator = ${colors.separator}
+
 wm-restack = bspwm
 override-redirect = false
+
+monitor = ${env:MONITOR:}
 
 ;                      _       _           
 ;  _ __ ___   ___   __| |_   _| | ___  ___ 
@@ -44,9 +46,10 @@ tail = true
 type = custom/script
 exec = echo ''
 label = %{T3}%{T-}
-format-foreground = ${color.FG}
-format-background = ${color.BG}
+format-foreground = ${color.BG}
+format-background = ${color.pink}
 format-padding = 1
+format-offset = -18
 click-left = "blueman-manager"
 
 [module/mixer]
@@ -64,20 +67,20 @@ label-background = ${colors.background}
 [module/bspwm]
 type = internal/bspwm
 
-;label-focused = 
-;label-occupied = 
-;label-empty = 
+label-focused = 
+label-occupied = 
+label-empty = 
 
 enable-click = true
 reverse-scroll = false
 
-label-focused-foreground = ${color.FG}
-label-occupied-foreground = ${color.BGA}
-label-empty-foreground = ${color.BG}
+label-focused-foreground = ${color.pink}
+label-occupied-foreground = ${color.pink}
+label-empty-foreground = ${color.BGA}
 
-;label-focused-padding = 1
-;label-occupied-padding = 1
-;label-empty-padding = 1
+label-focused-padding = 1
+label-occupied-padding = 1
+label-empty-padding = 1
 
 ;label-focused = 
 ;label-focused-padding = 1
@@ -136,12 +139,12 @@ interval = 3.0
 
 format-connected = 直 <label-connected>
 label-connected = "%{A1:networkmanager_dmenu:}%essid%%{A}"
-format-connected-foreground = ${color.FG}
-format-connected-background = ${color.BG}
+format-connected-foreground = ${color.BG}
+format-connected-background = ${color.blue}
 
 label-disconnected = "%{A1:networkmanager_dmenu:}睊%{A}"
-format-disconnected-foreground = ${color.FG}
-format-disconnected-background = ${color.BG}
+format-disconnected-foreground = ${color.BG}
+format-disconnected-background = ${color.blue}
 
 format-connected-padding = 1
 format-disconnected-padding = 1
@@ -170,8 +173,8 @@ date = "%A %d %b"
 
 format =  <label>
 label = %date%, %time%
-format-foreground = ${color.FG}
-format-background = ${color.BG}
+format-foreground = ${color.BG}
+format-background = ${color.pink}
 format-padding = 1
 
 [module/pulseaudio]
@@ -179,14 +182,17 @@ type = internal/pulseaudio
 
 format-volume = 墳 <label-volume>
 label-volume = %percentage%%
-format-volume-foreground = ${color.FG}
-format-volume-background = ${color.BG}
+format-volume-foreground = ${color.BG}
+format-volume-background = ${color.yellow}
 format-volume-padding = 1
 
 label-muted = "婢"
-format-muted-foreground = ${color.FG}
-format-muted-background = ${color.BG}
+format-muted-foreground = ${color.BG}
+format-muted-background = ${color.yellow}
 format-muted-padding = 1
+
+format-volume-offset = -18
+format-muted-offset = -18
 
 [module/temperature]
 type = internal/temperature
@@ -299,12 +305,12 @@ label-discharging = %percentage%%
 format-full = %{T3}%{T-} <label-full>
 label-full = %percentage%%
 
-format-charging-foreground = ${color.FG}
-format-discharging-foreground = ${color.FG}
-format-full-foreground = ${color.FG}
-format-charging-background = ${color.BG}
-format-discharging-background = ${color.BG}
-format-full-background = ${color.BG}
+format-charging-foreground = ${color.BG}
+format-discharging-foreground = ${color.BG}
+format-full-foreground = ${color.BG}
+format-charging-background = ${color.yellow}
+format-discharging-background = ${color.yellow}
+format-full-background = ${color.yellow}
 
 format-charging-padding = 1
 format-discharging-padding = 1

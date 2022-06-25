@@ -20,14 +20,15 @@ xrandr --output HDMI-1 --same-as eDP-1 --auto
 bspc monitor -d 1 2 3 4 5
 
 bspc config border_width            2
-bspc config window_gap              7
+bspc config border_radius           0
+bspc config window_gap              0
 bspc config top_padding             0
 bspc config bottom_padding          0
 bspc config left_padding            0
 bspc config right_padding           0
 
-bspc config normal_border_color     '#496886'
-bspc config focused_border_color    '#d97e96'
+bspc config normal_border_color     '#202020'
+bspc config focused_border_color    '#bbbbee'
 
 bspc config split_ratio             0.5
 bspc config borderless_monocle      true
@@ -37,7 +38,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a zoom state=floating
 
 ~/.fehbg
-~/.config/polybar/launch.sh --shades &
+~/.config/polybar/launch.sh &
 # killall nm-applet
 # nm-applet &
 # killall blueman-applet

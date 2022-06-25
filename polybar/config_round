@@ -3,25 +3,79 @@
 [global/wm]
 include-file = ~/.config/polybar/colors
 
-[bar/main]
+[bar/workspaces]
 enable-ipc = true
 monitor = ${env:MONITOR:}
 
-height = 30
-width = 100%
-padding = 0
+height = 40
+width = 190
+padding = 1
 
-radius = 0
+radius = 10
+
+offset-x = 10
+offset-y = 10
 
 background = ${color.BG}
 foreground = ${color.FG}
 
-font-0 = monospace:size=16;3
+font-0 = monospace:size=20;3
 font-1 = Iosevka Nerd Font Mono:size=24;6
 font-2 = Iosevka Nerd Font Mono:size=16;4
 
 modules-left = bspwm
-modules-right = wlan battery pulseaudio time bt
+; modules-right = wlan battery pulseaudio time bt
+
+wm-restack = bspwm
+override-redirect = false
+
+[bar/time]
+enable-ipc = true
+monitor = ${env:MONITOR:}
+
+height = 40
+width = 250
+padding = 1
+
+radius = 10
+
+offset-x = 50%:-125
+offset-y = 10
+
+background = ${color.BG}
+foreground = ${color.FG}
+
+font-0 = monospace:size=11;3
+font-1 = Iosevka Nerd Font Mono:size=24;6
+font-2 = Iosevka Nerd Font Mono:size=16;4
+
+modules-center = time
+; modules-right = wlan battery pulseaudio time bt
+
+wm-restack = bspwm
+override-redirect = false
+
+[bar/status]
+enable-ipc = true
+monitor = ${env:MONITOR:}
+
+height = 40
+width = 280
+padding = 1
+
+radius = 10
+
+offset-x = 100%:-290
+offset-y = 10
+
+background = ${color.BG}
+foreground = ${color.FG}
+
+font-0 = monospace:size=11;3
+font-1 = Iosevka Nerd Font Mono:size=24;6
+font-2 = Iosevka Nerd Font Mono:size=16;4
+
+modules-center = wlan battery pulseaudio bt
 
 wm-restack = bspwm
 override-redirect = false
@@ -64,20 +118,20 @@ label-background = ${colors.background}
 [module/bspwm]
 type = internal/bspwm
 
-;label-focused = 
-;label-occupied = 
-;label-empty = 
+label-focused = 
+label-occupied = 
+label-empty = 
 
 enable-click = true
 reverse-scroll = false
 
 label-focused-foreground = ${color.FG}
-label-occupied-foreground = ${color.BGA}
-label-empty-foreground = ${color.BG}
+label-occupied-foreground = ${color.FG}
+label-empty-foreground = ${color.BGA}
 
-;label-focused-padding = 1
-;label-occupied-padding = 1
-;label-empty-padding = 1
+label-focused-padding = 1
+label-occupied-padding = 1
+label-empty-padding = 1
 
 ;label-focused = 
 ;label-focused-padding = 1
