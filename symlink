@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for file in "$@"; do
+    if ! grep config_file_path $file > /dev/null; then
+        echo "$file does not have 'config_file_path=<path>', aborting"
+        exit 1
+    fi
+
+    src=$(realpath $file)
+    dst=$(grep config_file_path $file | cut -d = -f 2 | cut -d ' ' -f 1)
+    dst=${dst/#\~/$HOME}    # manually expand tilde
+    mkdir -p $(dirname $dst)
+
+    ln -sf $src $dst
+done

@@ -1,43 +1,46 @@
-# ~/.config/alacritty/alacritty.yml
+# config_file_path=~/.config/alacritty/alacritty.yml
 
-env:
-  WINIT_X11_SCALE_FACTOR: "1.0"
-
-# Colors (Solarized Dark)
 colors:
-  # Default colors
   primary:
-    background: '0x1a1a1a'
-    foreground: '0xffffff'
-
-  # Normal colors
+    background: "0x191724"
+    foreground: "0xe0def4"
+  cursor:
+    text: "0xe0def4"
+    cursor: "0x524f67"
+  vi_mode_cursor:
+    text: "0xe0def4"
+    cursor: "0x524f67"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xe0def4"
+    background: "0x403d52"
   normal:
-    black:   '0x24340e'
-    red:     '0xd5437e'
-    green:   '0xaeb731'
-    yellow:  '0xd59031'
-    blue:    '0x9a43b9'
-    magenta: '0xc14391'
-    cyan:    '0x71b391'
-    white:   '0xb7b7b7'
-
-  # Bright colors
+    black: "0x26233a"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
   bright:
-    black:   '0x526e50'
-    red:     '0xf08290'
-    green:   '0xc0d270'
-    yellow:  '0xf0a270'
-    blue:    '0xac82d4'
-    magenta: '0xd882a8'
-    cyan:    '0x90caa8'
-    white:   '0xeae9e9'
+    black: "0x6e6a86"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
+  hints:
+    start:
+      foreground: "#908caa"
+      background: "#1f1d2e"
+    end:
+      foreground: "#6e6a86"
+      background: "#1f1d2e"
 
 font:
-  normal:
-    family: monospace
-    style: Regular
-  size: 11
-
-live_config_reload: true
-dynamic_padding: true
-background_opacity: 0.9
+  size: 7.0
