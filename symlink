@@ -11,5 +11,11 @@ for file in "$@"; do
     dst=${dst/#\~/$HOME}    # manually expand tilde
     mkdir -p $(dirname $dst)
 
-    ln -sf $src $dst
+    err=$(ln -sf $src $dst 2>&1)
+    if [[ $err == *'Permission denied'* ]]; then
+        sudo ln -sf $src $dst
+    elif [[ -n $err ]]; then
+        echo $err
+        exit 1
+    fi
 done
