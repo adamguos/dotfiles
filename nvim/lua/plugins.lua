@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
 
     use 'rose-pine/neovim'
+    use 'ellisonleao/gruvbox.nvim'
 
     use {
         'nvim-lualine/lualine.nvim',
