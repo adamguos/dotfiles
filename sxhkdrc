@@ -10,7 +10,7 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run -fn "monospace:size=11" -nb '#191724' -nf '#e0def4' -sb '#ebbcba' -sf '#21202e'
+	dmenu_run -fn "monospace:size=11" -nb '#282828' -nf '#ebdbb2' -sb '#98971a' -sf '#32302f'
 
 # make sxhkd reload its configuration files:
 super + Escape
