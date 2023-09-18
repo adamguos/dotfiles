@@ -14,7 +14,7 @@ vim.opt.showbreak = '>>  '
 vim.g.mapleader = ' '
 
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'rose-pine-moon'
+vim.cmd.colorscheme 'gruvbox'
 
 require('plugins')
 require('neo-tree-config')
