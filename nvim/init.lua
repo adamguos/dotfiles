@@ -10,6 +10,7 @@ vim.opt.autoindent = true
 vim.opt.hlsearch = true
 vim.opt.breakindent = true
 vim.opt.showbreak = '>>  '
+vim.opt.mouse = ''
 
 vim.g.mapleader = ' '
 
