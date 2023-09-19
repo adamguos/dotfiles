@@ -15,7 +15,7 @@ vim.opt.mouse = ''
 vim.g.mapleader = ' '
 
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'rose-pine-moon'
 
 require('plugins')
 require('neo-tree-config')
