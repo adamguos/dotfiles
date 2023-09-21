@@ -1,7 +1,7 @@
 # config_file_path=~/.zshrc
 
 bindkey -v
-PROMPT="%F{magenta}%~ > %f"
+PROMPT="%F{yellow}%~ > %f"
 
 export VISUAL=nvim
 export EDITOR=nvim
