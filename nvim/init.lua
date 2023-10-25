@@ -1,5 +1,7 @@
 -- config_file_path=~/.config/nvim/init.lua
 
+require('plugins')
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.expandtab = true
@@ -17,7 +19,6 @@ vim.g.mapleader = ' '
 vim.opt.background = 'dark'
 vim.cmd.colorscheme 'rose-pine-moon'
 
-require('plugins')
 require('neo-tree-config')
 require('nvim-lspconfig')
 require('lualine').setup()
