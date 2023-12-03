@@ -29,9 +29,25 @@ return require('packer').startup(function(use)
     }
 
     use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end
+    }
 
     use 'rose-pine/neovim'
     use 'ellisonleao/gruvbox.nvim'
+    use 'folke/tokyonight.nvim'
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -43,9 +59,8 @@ return require('packer').startup(function(use)
         config = function() return require('tmux').setup() end
     }
 
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then
-        require('packer').sync()
-    end
+    use {
+        'j-morano/buffer_manager.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
 end)

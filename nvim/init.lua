@@ -17,8 +17,9 @@ vim.opt.mouse = ''
 vim.g.mapleader = ' '
 
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'rose-pine-moon'
+vim.cmd.colorscheme 'tokyonight-night'
 
 require('neo-tree-config')
 require('nvim-lspconfig')
+require('nvim-treesitter-config')
 require('lualine').setup()

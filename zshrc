@@ -8,3 +8,5 @@ export EDITOR=nvim
 export TERM=xterm-256color
 
 alias ll='ls -hl --color=auto'
+
+source ~/.cargo/env
