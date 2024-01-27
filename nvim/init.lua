@@ -17,7 +17,7 @@ vim.opt.mouse = ''
 vim.g.mapleader = ' '
 
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme 'dracula'
 
 require('neo-tree-config')
 require('nvim-lspconfig')

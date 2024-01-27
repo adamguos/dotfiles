@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
     use 'rose-pine/neovim'
     use 'ellisonleao/gruvbox.nvim'
     use 'folke/tokyonight.nvim'
+    use 'Mofiqul/dracula.nvim'
 
     use {
         'nvim-lualine/lualine.nvim',
