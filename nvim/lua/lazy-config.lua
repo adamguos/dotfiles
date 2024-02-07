@@ -23,6 +23,11 @@ require("lazy").setup({
             'MunifTanjim/nui.nvim'
         }
     },
+    {
+        'nvim-telescope/telescope.nvim',
+        branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
 
     'neovim/nvim-lspconfig',
     'hrsh7th/cmp-nvim-lsp',
