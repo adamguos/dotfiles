@@ -54,7 +54,7 @@ require("lazy").setup({
     },
 
     {
-        'j-morano/buffer_manager.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        'akinsho/bufferline.nvim',
+        dependencies = 'nvim-tree/nvim-web-devicons'
     }
 });

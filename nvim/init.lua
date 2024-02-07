@@ -21,4 +21,5 @@ vim.cmd.colorscheme 'dracula'
 require('neo-tree-config')
 require('nvim-lspconfig')
 require('nvim-treesitter-config')
+require('bufferline-config')
 require('lualine').setup()
