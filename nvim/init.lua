@@ -1,6 +1,7 @@
 -- config_file_path=~/.config/nvim/init.lua
 
-require('plugins')
+vim.g.mapleader = ' '
+require('lazy-config')
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -13,8 +14,6 @@ vim.opt.hlsearch = true
 vim.opt.breakindent = true
 vim.opt.showbreak = '>>  '
 vim.opt.mouse = ''
-
-vim.g.mapleader = ' '
 
 vim.opt.background = 'dark'
 vim.cmd.colorscheme 'dracula'
