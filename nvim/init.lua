@@ -16,7 +16,7 @@ vim.opt.showbreak = '>>  '
 vim.opt.mouse = ''
 
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'dracula'
+vim.cmd.colorscheme 'solarized-osaka'
 
 require('neo-tree-config')
 require('nvim-lspconfig')

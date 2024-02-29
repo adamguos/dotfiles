@@ -50,6 +50,8 @@ require("lazy").setup({
     'ellisonleao/gruvbox.nvim',
     'folke/tokyonight.nvim',
     'Mofiqul/dracula.nvim',
+    'craftzdog/solarized-osaka.nvim',
+    'edkolev/tmuxline.vim',
 
     'nvim-lualine/lualine.nvim',
 
