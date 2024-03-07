@@ -1,7 +1,6 @@
 -- config_file_path=~/.config/nvim/init.lua
 
 vim.g.mapleader = ' '
-require('lazy-config')
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -16,11 +15,5 @@ vim.opt.showbreak = '>>  '
 vim.opt.mouse = ''
 
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'solarized-osaka'
 
-require('neo-tree-config')
-require('nvim-lspconfig')
-require('nvim-treesitter-config')
-require('bufferline-config')
-require('telescope-config')
-require('lualine').setup()
+require('lazy-config')

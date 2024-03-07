@@ -15,53 +15,35 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'nvim-neo-tree/neo-tree.nvim',
-        branch = 'v3.x',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-tree/nvim-web-devicons',
-            'MunifTanjim/nui.nvim'
-        }
-    },
-    {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = function() require('telescope-config') end
     },
-
-    'neovim/nvim-lspconfig',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-vsnip',
-    'hrsh7th/vim-vsnip',
-
     {
-        'nvim-treesitter/nvim-treesitter',
-        build = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-vsnip',
+            'hrsh7th/nvim-cmp',
+            'hrsh7th/vim-vsnip'
+        },
+        config = function() require('nvim-lspconfig') end
     },
-
-    'rose-pine/neovim',
-    'ellisonleao/gruvbox.nvim',
-    'folke/tokyonight.nvim',
-    'Mofiqul/dracula.nvim',
-    'craftzdog/solarized-osaka.nvim',
-    'edkolev/tmuxline.vim',
-
-    'nvim-lualine/lualine.nvim',
-
+    {
+        'rose-pine/neovim',
+        lazy = false,
+        priority = 1000,
+        config = function() vim.cmd([[colorscheme rose-pine]]) end
+    },
+    {
+        'edkolev/tmuxline.vim',
+    },
     {
         'aserowy/tmux.nvim',
         config = function() return require('tmux').setup() end
     },
-
-    {
-        'akinsho/bufferline.nvim',
-        dependencies = 'nvim-tree/nvim-web-devicons'
-    }
 });
