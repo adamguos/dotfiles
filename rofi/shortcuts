@@ -1,6 +1,0 @@
-#!/bin/bash
-# ~/.config/rofi/shortcuts
-[ -d ~/Development/dotfiles ] && dotfiles="$HOME/Development/dotfiles" || dotfiles="$HOME/dotfiles"
-echo $dotfiles
-chosen=$(ls -1 $dotfiles/links | rofi -dmenu -i -p)
-xdg-open $(cat "$dotfiles/links/$chosen")

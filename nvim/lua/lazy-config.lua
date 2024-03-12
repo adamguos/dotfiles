@@ -34,10 +34,10 @@ require("lazy").setup({
         config = function() require('nvim-lspconfig') end
     },
     {
-        'rose-pine/neovim',
+        'junegunn/seoul256.vim',
         lazy = false,
         priority = 1000,
-        config = function() vim.cmd([[colorscheme rose-pine]]) end
+        config = function() vim.cmd([[colorscheme seoul256]]) end
     },
     {
         'edkolev/tmuxline.vim',
