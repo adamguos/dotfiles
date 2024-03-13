@@ -21,6 +21,10 @@ require("lazy").setup({
         config = function() require('telescope-config') end
     },
     {
+        'lewis6991/gitsigns.nvim',
+        config = function() require('gitsigns').setup() end
+    },
+    {
         'neovim/nvim-lspconfig',
         dependencies = {
             'hrsh7th/cmp-buffer',
