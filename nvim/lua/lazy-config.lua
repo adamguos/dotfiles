@@ -38,16 +38,29 @@ require("lazy").setup({
         config = function() require('nvim-lspconfig') end
     },
     {
-        'junegunn/seoul256.vim',
+        'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
-        config = function() vim.cmd([[colorscheme seoul256]]) end
+        config = function()
+            vim.cmd([[set background=dark]])
+            vim.cmd([[let g:gruvbox_material_background='dark']])
+            vim.cmd([[colorscheme gruvbox-material]])
+        end
     },
     {
         'edkolev/tmuxline.vim',
     },
     {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function() return require('lualine').setup() end
+    },
+    {
         'aserowy/tmux.nvim',
         config = function() return require('tmux').setup() end
     },
+    {
+        'stevearc/oil.nvim',
+        config = function() return require('oil').setup() end
+    }
 });
