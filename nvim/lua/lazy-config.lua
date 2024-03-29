@@ -43,13 +43,12 @@ require("lazy").setup({
         config = function() require('treesitter-config') end
     },
     {
-        'sainnhe/gruvbox-material',
+        'comfysage/evergarden',
         lazy = false,
         priority = 1000,
         config = function()
             vim.cmd([[set background=dark]])
-            vim.cmd([[let g:gruvbox_material_background='dark']])
-            vim.cmd([[colorscheme gruvbox-material]])
+            vim.cmd([[colorscheme evergarden]])
         end
     },
     {
@@ -58,7 +57,7 @@ require("lazy").setup({
     {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-        config = function() return require('lualine').setup() end
+        config = function() require('lualine-config') end
     },
     {
         'aserowy/tmux.nvim',
@@ -70,5 +69,8 @@ require("lazy").setup({
             vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
             return require('oil').setup()
         end
+    },
+    {
+        'psliwka/termcolors.nvim'
     }
 });
