@@ -52,7 +52,7 @@ require("lazy").setup({
         end
     },
     {
-        'edkolev/tmuxline.vim',
+        'adamguos/tmuxcolors.nvim',
     },
     {
         'nvim-lualine/lualine.nvim',
