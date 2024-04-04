@@ -43,12 +43,12 @@ require("lazy").setup({
         config = function() require('treesitter-config') end
     },
     {
-        'comfysage/evergarden',
+        'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
         config = function()
             vim.cmd([[set background=dark]])
-            vim.cmd([[colorscheme evergarden]])
+            vim.cmd([[colorscheme gruvbox-material]])
         end
     },
     {
