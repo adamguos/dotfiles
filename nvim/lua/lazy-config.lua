@@ -47,12 +47,12 @@ require("lazy").setup({
         config = function() require('conform-config') end
     },
     {
-        'sainnhe/gruvbox-material',
+        'rebelot/kanagawa.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.cmd([[set background=dark]])
-            vim.cmd([[colorscheme gruvbox-material]])
+            vim.cmd([[colorscheme kanagawa-dragon]])
         end
     },
     {
