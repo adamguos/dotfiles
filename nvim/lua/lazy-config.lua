@@ -43,6 +43,10 @@ require("lazy").setup({
         config = function() require('treesitter-config') end
     },
     {
+        'stevearc/conform.nvim',
+        config = function() require('conform-config') end
+    },
+    {
         'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
