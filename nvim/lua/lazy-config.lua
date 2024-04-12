@@ -47,12 +47,14 @@ require("lazy").setup({
         config = function() require('conform-config') end
     },
     {
-        'rebelot/kanagawa.nvim',
+        'sainnhe/everforest',
         lazy = false,
         priority = 1000,
         config = function()
             vim.cmd([[set background=dark]])
-            vim.cmd([[colorscheme kanagawa-dragon]])
+            vim.g.everforest_background = 'soft'
+            vim.g.everforest_better_performance = 1
+            vim.cmd([[colorscheme everforest]])
         end
     },
     {
