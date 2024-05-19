@@ -47,14 +47,15 @@ require("lazy").setup({
         config = function() require('conform-config') end
     },
     {
-        'sainnhe/everforest',
+        'craftzdog/solarized-osaka.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd([[set background=dark]])
-            vim.g.everforest_background = 'soft'
-            vim.g.everforest_better_performance = 1
-            vim.cmd([[colorscheme everforest]])
+            vim.o.background = 'dark'
+            require('solarized-osaka').setup({
+                transparent = false
+            })
+            vim.cmd([[colorscheme solarized-osaka]])
         end
     },
     {
