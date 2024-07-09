@@ -15,6 +15,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+        'sainnhe/everforest',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.o.background = 'dark'
+            vim.g.everforest_enable_italic = true
+            vim.g.everforest_background = 'soft'
+            vim.g.everforest_better_performance = 1
+            vim.cmd.colorscheme('everforest')
+        end
+    },
+    {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' },
@@ -45,18 +57,6 @@ require("lazy").setup({
     {
         'stevearc/conform.nvim',
         config = function() require('conform-config') end
-    },
-    {
-        'craftzdog/solarized-osaka.nvim',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.o.background = 'dark'
-            require('solarized-osaka').setup({
-                transparent = false
-            })
-            vim.cmd([[colorscheme solarized-osaka]])
-        end
     },
     {
         'adamguos/tmuxcolors.nvim',
