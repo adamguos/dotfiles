@@ -3,9 +3,10 @@
 bindkey -v
 PROMPT="%F{yellow}%~ > %f"
 
-export VISUAL=nvim
 export EDITOR=nvim
+export PATH="$HOME/bin:$PATH"
 export TERM=xterm-256color
+export VISUAL=nvim
 
 alias ll='ls -hl --color=auto'
 
@@ -18,9 +19,14 @@ SAVEHIST=5000             # Number of history entries to save to disk
 # HISTDUP=erase           # Erase duplicates in the history file
 setopt appendhistory      # Append history to the history file (no overwriting)
 setopt sharehistory       # Share history across terminals
-# setopt incappendhistory # Immediately append to the history file, not just when a term is killed
+setopt incappendhistory # Immediately append to the history file, not just when a term is killed
 
 if [[ -d ~/.cargo ]]; then
     source ~/.cargo/env
 fi
-source /usr/share/fzf/shell/key-bindings.zsh
+
+if [[ -d /usr/share/fzf/shell ]]; then
+    source /usr/share/fzf/shell/key-bindings.zsh
+elif [[ -d /usr/share/doc/fzf/examples ]]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi

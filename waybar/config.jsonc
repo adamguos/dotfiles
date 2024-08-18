@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-left": ["wlr/taskbar"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "keyboard-state", "battery", "clock", "tray"],
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -25,6 +25,9 @@
     //         "default": ""
     //     }
     // },
+    "wlr/taskbar": {
+        "format": "{icon} {name}"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -120,8 +123,9 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
+    "battery#bat1": {
+        "format": "{capacity}% {icon}",
+        "bat": "BAT1"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
