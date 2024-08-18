@@ -6,7 +6,7 @@
 
 window#waybar {
     background-color: rgba(46, 56, 60, 0.75);
-    color: #859289;
+    color: #d3c6aa;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -50,7 +50,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: rgba(46, 56, 60, 0);
-    color: #859289;
+    color: #d3c6aa;
 }
 
 #workspaces button:hover {
@@ -88,7 +88,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
-    color: #859289;
+    color: #d3c6aa;
 }
 
 #window,
@@ -110,26 +110,28 @@ button:hover {
     background-color: rgba(46, 56, 60, 0);
 }
 
+/*
 #battery {
     background-color: rgba(46, 56, 60, 0);
-    color: #859289;
+    color: #d3c6aa;
 }
 
 #battery.charging, #battery.plugged {
-    color: #859289;
+    color: #d3c6aa;
     background-color: rgba(46, 56, 60, 0);
 }
+*/
 
 @keyframes blink {
     to {
         background-color: rgba(46, 56, 60, 0);
-        color: #859289;
+        color: #d3c6aa;
     }
 }
 
 #battery.critical:not(.charging) {
     background-color: rgba(46, 56, 60, 0);
-    color: #859289;
+    color: #d3c6aa;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -143,7 +145,7 @@ label:focus {
 
 #cpu {
     background-color: rgba(46, 56, 60, 0);
-    color: #859289;
+    color: #d3c6aa;
 }
 
 #memory {
@@ -168,7 +170,7 @@ label:focus {
 
 #pulseaudio {
     background-color: rgba(46, 56, 60, 0);
-    color: #859289;
+    color: #d3c6aa;
 }
 
 #pulseaudio.muted {
@@ -178,7 +180,7 @@ label:focus {
 
 #wireplumber {
     background-color: rgba(46, 56, 60, 0);
-    color: #859289;
+    color: #d3c6aa;
 }
 
 #wireplumber.muted {
@@ -256,7 +258,7 @@ label:focus {
 
 #keyboard-state {
     background: #97e1ad;
-    color: #859289;
+    color: #d3c6aa;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
