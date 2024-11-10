@@ -15,13 +15,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'zenbones-theme/zenbones.nvim',
-        dependencies = 'rktjmp/lush.nvim',
+        'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('zenburned')
+            vim.g.gruvbox_material_background = 'hard'
+            vim.g.gruvbox_material_better_performance = 1
+            vim.cmd.colorscheme('gruvbox-material')
         end
     },
     {
