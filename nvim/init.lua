@@ -14,5 +14,6 @@ vim.opt.breakindent = true
 vim.opt.showbreak = '>>  '
 vim.opt.mouse = ''
 vim.opt.termguicolors = true
+vim.opt.cc = '80'
 
 require('lazy-config')
