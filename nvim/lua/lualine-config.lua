@@ -12,13 +12,7 @@ require('lualine').setup({
             { 'diagnostics', color = 'Normal' }
         },
         lualine_c = {
-            { 'filename', color = 'Normal' },
-            { 'terminal', color = 'Normal' },
-            { 'replace', color = 'Normal' },
-            { 'command', color = 'Normal' },
-            { 'visual', color = 'Normal' },
-            { 'normal', color = 'Normal' },
-            { 'insert', color = 'Normal' }
+            { 'filename', color = 'Normal' }
         },
         lualine_x = {
             { 'encoding', color = 'Normal' },
