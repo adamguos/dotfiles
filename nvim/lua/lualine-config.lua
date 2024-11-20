@@ -3,8 +3,7 @@ require('lualine').setup({
         section_separators = {
             left = ' ',
             right = ' '
-        },
-        always_divide_middle = false
+        }
     },
     sections = {
         lualine_b = {
