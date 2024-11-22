@@ -15,14 +15,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'ilof2/posterpole.nvim',
+        -- 'ilof2/posterpole.nvim',
+        'savq/melange-nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
             -- vim.g.gruvbox_material_background = 'hard'
             -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('posterpole')
+            vim.cmd.colorscheme('melange')
         end
     },
     {
@@ -47,11 +48,6 @@ require("lazy").setup({
             'hrsh7th/vim-vsnip'
         },
         config = function() require('nvim-lspconfig') end
-    },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate',
-        config = function() require('treesitter-config') end
     },
     {
         'stevearc/conform.nvim',

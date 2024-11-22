@@ -4,7 +4,6 @@ bindkey -v
 PROMPT="%F{yellow}%~ > %f"
 
 export EDITOR=nvim
-export PATH="$HOME/bin:$PATH"
 export TERM=xterm-256color
 export VISUAL=nvim
 
