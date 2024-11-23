@@ -17,3 +17,8 @@ vim.opt.termguicolors = true
 vim.opt.cc = '80'
 
 require('lazy-config')
+
+vim.api.nvim_create_autocmd({'BufWritePre'}, {
+    pattern = '*.tex',
+    command = '!pdflatex %'
+});
