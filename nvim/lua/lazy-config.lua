@@ -15,15 +15,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'ilof2/posterpole.nvim',
-        -- 'savq/melange-nvim',
+        -- 'ilof2/posterpole.nvim',
+        'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            -- vim.g.gruvbox_material_background = 'hard'
-            -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('posterpole')
+            vim.g.gruvbox_material_background = 'hard'
+            vim.g.gruvbox_material_better_performance = 1
+            vim.cmd.colorscheme('gruvbox-material')
         end
     },
     {
