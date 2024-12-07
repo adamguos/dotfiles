@@ -20,6 +20,10 @@ require("lazy").setup({
         lazy = false,
         priority = 1000,
         config = function()
+            require('cyberdream').setup({
+                italic_comments = true
+            })
+
             vim.o.background = 'dark'
             -- vim.g.gruvbox_material_background = 'hard'
             -- vim.g.gruvbox_material_better_performance = 1
