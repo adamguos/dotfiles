@@ -16,18 +16,17 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         -- 'ilof2/posterpole.nvim',
-        'scottmckendry/cyberdream.nvim',
+        -- 'scottmckendry/cyberdream.nvim',
+        'steguiosaur/fullerene.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            require('cyberdream').setup({
-                italic_comments = true
-            })
-
             vim.o.background = 'dark'
             -- vim.g.gruvbox_material_background = 'hard'
             -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('cyberdream')
+            vim.cmd.colorscheme('fullerene')
+
+            vim.cmd.highlight('Comment gui=italic')
         end
     },
     {
