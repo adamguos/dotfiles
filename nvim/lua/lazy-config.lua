@@ -17,15 +17,15 @@ require("lazy").setup({
     {
         -- 'ilof2/posterpole.nvim',
         -- 'scottmckendry/cyberdream.nvim',
-        -- 'steguiosaur/fullerene.nvim',
-        'xero/miasma.nvim',
+        'steguiosaur/fullerene.nvim',
+        -- 'xero/miasma.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
             -- vim.g.gruvbox_material_background = 'soft'
             -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('miasma')
+            vim.cmd.colorscheme('fullerene')
 
             vim.cmd.highlight('Comment gui=italic')
         end
