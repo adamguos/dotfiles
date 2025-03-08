@@ -15,17 +15,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        -- 'ilof2/posterpole.nvim',
-        -- 'scottmckendry/cyberdream.nvim',
-        'steguiosaur/fullerene.nvim',
-        -- 'xero/miasma.nvim',
+        'cocopon/iceberg.vim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = 'dark'
+            vim.o.background = 'light'
             -- vim.g.gruvbox_material_background = 'soft'
             -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('fullerene')
+            vim.cmd.colorscheme('iceberg')
 
             vim.cmd.highlight('Comment gui=italic')
         end

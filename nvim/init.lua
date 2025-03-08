@@ -15,6 +15,7 @@ vim.opt.showbreak = '>>  '
 vim.opt.mouse = ''
 vim.opt.termguicolors = true
 vim.opt.cc = '80'
+vim.opt.cursorline = true
 
 require('lazy-config')
 
