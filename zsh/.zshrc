@@ -46,3 +46,5 @@ elif [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
     source /usr/share/fzf/completion.zsh
     source /usr/share/fzf/key-bindings.zsh
 fi
+
+source ~/.config/zsh/zsh-vi-search/zsh-vi-search.zsh
