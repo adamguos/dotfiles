@@ -75,5 +75,15 @@ require("lazy").setup({
     },
     {
         'psliwka/termcolors.nvim'
+    },
+    {
+        'akinsho/bufferline.nvim',
+        config = function()
+            require('bufferline').setup({
+                options = {
+                    numbers = 'buffer_id'
+                }
+            })
+        end
     }
 });
