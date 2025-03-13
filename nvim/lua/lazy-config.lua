@@ -15,14 +15,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'cocopon/iceberg.vim',
+        'thesimonho/kanagawa-paper.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'light'
             -- vim.g.gruvbox_material_background = 'soft'
             -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('iceberg')
+            vim.cmd.colorscheme('kanagawa-paper')
 
             vim.cmd.highlight('Comment gui=italic')
         end
