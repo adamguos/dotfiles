@@ -15,15 +15,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        -- 'thesimonho/kanagawa-paper.nvim',
-        'maxmx03/solarized.nvim',
+        'thesimonho/kanagawa-paper.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
             -- vim.g.gruvbox_material_background = 'soft'
             -- vim.g.gruvbox_material_better_performance = 1
-            vim.cmd.colorscheme('solarized')
+            vim.cmd.colorscheme('kanagawa-paper')
 
             vim.cmd.highlight('Comment gui=italic')
         end
