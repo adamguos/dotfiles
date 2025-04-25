@@ -15,17 +15,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'sainnhe/sonokai',
+        'miikanissi/modus-themes.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.g.sonokai_style = 'shusia'
-            vim.g.sonokai_better_performance = 1
-            vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('sonokai')
+            -- vim.g.sonokai_style = 'shusia'
+            -- vim.g.sonokai_better_performance = 1
+            -- vim.g.sonokai_enable_italic = true
+            vim.cmd.colorscheme('modus')
 
-            -- vim.cmd.highlight('Comment gui=italic')
+            vim.cmd.highlight('Comment gui=italic')
         end
     },
     {
