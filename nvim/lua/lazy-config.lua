@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'miikanissi/modus-themes.nvim',
+        'Mofiqul/dracula.nvim',
         lazy = false,
         priority = 1000,
         config = function()
@@ -23,7 +23,7 @@ require("lazy").setup({
             -- vim.g.sonokai_style = 'shusia'
             -- vim.g.sonokai_better_performance = 1
             -- vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('modus')
+            vim.cmd.colorscheme('dracula')
 
             vim.cmd.highlight('Comment gui=italic')
         end
