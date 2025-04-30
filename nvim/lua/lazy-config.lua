@@ -15,17 +15,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'Mofiqul/dracula.nvim',
+        'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            -- vim.g.sonokai_style = 'shusia'
-            -- vim.g.sonokai_better_performance = 1
-            -- vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('dracula')
+            vim.g.sonokai_style = 'hard'
+            vim.g.sonokai_better_performance = 1
+            vim.g.sonokai_enable_italic = true
+            vim.cmd.colorscheme('gruvbox-material')
 
-            vim.cmd.highlight('Comment gui=italic')
+            -- vim.cmd.highlight('Comment gui=italic')
         end
     },
     {
@@ -100,6 +100,8 @@ require("lazy").setup({
             'nvim-treesitter/nvim-treesitter',
             'nvim-tree/nvim-web-devicons'
         },
-        opts = {}
+        config = function()
+            require('render-markdown-config')
+        end
     }
 });
