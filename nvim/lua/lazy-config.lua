@@ -15,15 +15,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'sainnhe/gruvbox-material',
+        'folke/tokyonight.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.g.sonokai_style = 'hard'
-            vim.g.sonokai_better_performance = 1
-            vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('gruvbox-material')
+            -- vim.g.sonokai_style = 'hard'
+            -- vim.g.sonokai_better_performance = 1
+            -- vim.g.sonokai_enable_italic = true
+            vim.cmd.colorscheme('tokyonight-night')
 
             -- vim.cmd.highlight('Comment gui=italic')
         end
