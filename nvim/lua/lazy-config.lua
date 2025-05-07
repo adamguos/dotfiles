@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'folke/tokyonight.nvim',
+        'savq/melange-nvim',
         lazy = false,
         priority = 1000,
         config = function()
@@ -23,7 +23,7 @@ require("lazy").setup({
             -- vim.g.sonokai_style = 'hard'
             -- vim.g.sonokai_better_performance = 1
             -- vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('tokyonight-night')
+            vim.cmd.colorscheme('melange')
 
             -- vim.cmd.highlight('Comment gui=italic')
         end
