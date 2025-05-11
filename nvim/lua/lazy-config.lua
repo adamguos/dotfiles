@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'savq/melange-nvim',
+        'rose-pine/neovim',
         lazy = false,
         priority = 1000,
         config = function()
@@ -23,7 +23,7 @@ require("lazy").setup({
             -- vim.g.sonokai_style = 'hard'
             -- vim.g.sonokai_better_performance = 1
             -- vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('melange')
+            vim.cmd.colorscheme('rose-pine')
 
             -- vim.cmd.highlight('Comment gui=italic')
         end
