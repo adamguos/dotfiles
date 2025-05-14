@@ -15,17 +15,22 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'rose-pine/neovim',
+        'everviolet/nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = 'dark'
-            -- vim.g.sonokai_style = 'hard'
+            require('evergarden').setup({
+                theme = {
+                    variant = 'winter'
+                }
+            })
+
+            vim.cmd.colorscheme('evergarden')
+            -- vim.cmd.highlight('Comment gui=italic')
             -- vim.g.sonokai_better_performance = 1
             -- vim.g.sonokai_enable_italic = true
-            vim.cmd.colorscheme('rose-pine')
-
-            -- vim.cmd.highlight('Comment gui=italic')
+            -- vim.g.sonokai_style = 'hard'
+            vim.o.background = 'dark'
         end
     },
     {
