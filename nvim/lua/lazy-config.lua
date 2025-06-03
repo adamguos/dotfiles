@@ -15,12 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'drewxs/ash.nvim',
+        'WTFox/jellybeans.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = 'dark'
-            vim.cmd.colorscheme('ash')
+            vim.o.background = 'light'
+            vim.cmd.colorscheme('jellybeans-light')
         end
     },
     {
