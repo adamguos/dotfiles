@@ -13,12 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'ellisonleao/gruvbox.nvim',
+        'rose-pine/neovim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('gruvbox')
+            vim.cmd.colorscheme('rose-pine')
         end
     },
     {
