@@ -1,10 +1,8 @@
-# config_file_path=~/.zshrc
-
 bindkey -v
 PROMPT="%F{yellow}%~ > %f"
 
 export EDITOR=nvim
-export TERM=xterm-256color
+# export TERM=xterm-256color
 export VISUAL=nvim
 
 alias ll='ls -hl --color=auto'
