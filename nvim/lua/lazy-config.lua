@@ -13,12 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'rose-pine/neovim',
+        'rebelot/kanagawa.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('rose-pine')
+            vim.cmd.colorscheme('kanagawa-dragon')
         end
     },
     {
