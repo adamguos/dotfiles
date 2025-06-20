@@ -13,12 +13,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'rebelot/kanagawa.nvim',
+        'sainnhe/everforest',
         lazy = false,
         priority = 1000,
         config = function()
+            vim.g.everforest_background = 'hard'
+            vim.g.everforest_better_performance = 1
+            vim.g.everforest_enable_italic = 1
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('kanagawa-wave')
+            vim.cmd.colorscheme('everforest')
         end
     },
     {
