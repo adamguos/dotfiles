@@ -13,15 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'sainnhe/everforest',
+        'EdenEast/nightfox.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.g.everforest_background = 'hard'
-            vim.g.everforest_better_performance = 1
-            vim.g.everforest_enable_italic = 1
+            vim.cmd.colorscheme('terafox')
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('everforest')
         end
     },
     {
