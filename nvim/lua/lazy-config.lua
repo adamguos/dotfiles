@@ -13,11 +13,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'EdenEast/nightfox.nvim',
+        'xero/miasma.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme('terafox')
+            vim.cmd.colorscheme('miasma')
             vim.o.background = 'dark'
         end
     },
