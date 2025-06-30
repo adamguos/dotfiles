@@ -32,7 +32,7 @@ setopt sharehistory
 # Source
 #
 
-if [[ -d ~/.cargo ]]; then source ~/.cargo/env fi
+if [[ -d ~/.cargo ]]; then source ~/.cargo/env; fi
 
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
