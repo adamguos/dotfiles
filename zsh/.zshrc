@@ -1,10 +1,14 @@
 bindkey -v
 PROMPT="%F{yellow}%~ > %f"
 
+alias ll='ls -hl --color=auto'
+
 export EDITOR=nvim
 export VISUAL=nvim
 
-alias ll='ls -hl --color=auto'
+#
+# Completion
+#
 
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' \
@@ -28,20 +32,11 @@ setopt sharehistory
 # Source
 #
 
-if [[ -d ~/.cargo ]]; then
-    source ~/.cargo/env
-fi
+if [[ -d ~/.cargo ]]; then source ~/.cargo/env fi
 
-if [[ -f /usr/share/fzf/shell/key-bindings.zsh ]]; then
-    source /usr/share/fzf/shell/key-bindings.zsh
-elif [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
-    source /usr/share/doc/fzf/examples/key-bindings.zsh
-elif [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
-    source /usr/share/fzf/key-bindings.zsh
-fi
-
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source <(fzf --zsh)
 
 #
 # Bindings
