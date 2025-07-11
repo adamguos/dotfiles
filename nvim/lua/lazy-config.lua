@@ -13,12 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'EdenEast/nightfox.nvim',
+        'webhooked/kanso.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('terafox')
+            vim.cmd.colorscheme('kanso')
         end
     },
     {
