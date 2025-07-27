@@ -13,12 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'webhooked/kanso.nvim',
+        'zenbones-theme/zenbones.nvim',
+        dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('kanso')
+            vim.cmd.colorscheme('zenwritten')
         end
     },
     {
