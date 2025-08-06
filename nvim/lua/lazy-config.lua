@@ -60,10 +60,7 @@ require("lazy").setup({
     },
     {
         'stevearc/oil.nvim',
-        config = function()
-            vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-            return require('oil').setup()
-        end
+        config = function() require('oil-config') end
     },
     {
         'psliwka/termcolors.nvim'
