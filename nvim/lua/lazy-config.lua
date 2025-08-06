@@ -13,13 +13,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'nyoom-engineering/oxocarbon.nvim',
+        'catppuccin/nvim',
+        name = 'catppuccin',
         dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('oxocarbon')
+            vim.cmd.colorscheme('catppuccin-mocha')
         end
     },
     {
