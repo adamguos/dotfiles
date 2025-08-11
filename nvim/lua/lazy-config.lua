@@ -13,14 +13,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'catppuccin/nvim',
-        name = 'catppuccin',
+        'rose-pine/neovim',
+        name = 'rose-pine',
         dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('catppuccin-mocha')
+            vim.cmd.colorscheme('rose-pine-dawn')
         end
     },
     {
