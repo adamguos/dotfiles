@@ -1,5 +1,3 @@
--- config_file_path=~/.config/nvim/lua/lazy-config.lua
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -20,7 +18,7 @@ require("lazy").setup({
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = 'light'
+            vim.o.background = 'dark'
             vim.cmd.colorscheme('melange')
         end
     },

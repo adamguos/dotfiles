@@ -1,5 +1,3 @@
--- config_file_path=~/.config/nvim/lua/nvim-lspconfig.lua
-
 -- Set up nvim-cmp.
 local cmp = require('cmp')
 

@@ -1,5 +1,3 @@
--- config_file_path=~/.config/nvim/lua/lualine-config.lua
-
 require('lualine').setup({
     options = {
         section_separators = {

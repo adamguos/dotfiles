@@ -1,5 +1,3 @@
--- config_file_path=~/.config/nvim/init.lua
-
 vim.g.mapleader = ' '
 
 vim.opt.number = true
@@ -24,7 +22,7 @@ vim.api.nvim_create_autocmd({'BufWritePost'}, {
     command = '!pdflatex %'
 });
 
--- vim.api.nvim_create_autocmd({'BufWritePost'}, {
---     pattern = '*.md',
---     command = '!pandoc "%" -o "%:r.html"'
--- });
+vim.api.nvim_create_autocmd({'BufWritePost'}, {
+    pattern = '*.md',
+    command = '!pandoc "%" -o "%:r.html"'
+});
