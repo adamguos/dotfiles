@@ -1,0 +1,11 @@
+# /etc/systemd/system/restart-bluetooth.service
+
+[Unit]
+Description=Restart bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl restart bluetooth.service
+
+[Install]
+WantedBy=multi-user.target

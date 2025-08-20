@@ -1,0 +1,11 @@
+# /etc/systemd/system/restart-bluetooth.timer
+
+[Unit]
+Description=Run restart-bluetooth service on boot with a delay
+
+[Timer]
+Unit=restart-bluetooth.service
+OnBootSec=15sec
+
+[Install]
+WantedBy=timers.target

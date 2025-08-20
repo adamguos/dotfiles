@@ -1,3 +1,5 @@
+-- config_file_path=~/.config/nvim/lua/conform-config.lua
+
 local conform = require('conform')
 
 conform.setup({

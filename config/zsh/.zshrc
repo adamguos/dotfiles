@@ -1,7 +1,9 @@
-bindkey -v
+# config_file_path=~/.zshrc
 PROMPT="%F{yellow}%~ > %f"
 
-alias ll='ls -hl --color=auto'
+alias ll='ls -ahl --color=auto'
+
+bindkey -v
 
 export EDITOR=nvim
 export VISUAL=nvim
