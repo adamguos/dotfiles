@@ -54,3 +54,7 @@ source ~/.config/zsh/zsh-vi-search.zsh
 #
 
 bindkey '^w' autosuggest-accept
+
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd '!' edit-command-line
