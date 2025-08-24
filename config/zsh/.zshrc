@@ -47,7 +47,6 @@ else
 fi
 
 source <(fzf --zsh)
-source ~/.config/zsh/zsh-vi-search.zsh
 
 #
 # Bindings
