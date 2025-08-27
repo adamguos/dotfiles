@@ -1,5 +1,5 @@
 # config_file_path=~/.zshrc
-PROMPT="%F{yellow}%~ > %f"
+PROMPT="%F{red}%~ > %f"
 
 alias ll='ls -ahl --color=auto'
 
