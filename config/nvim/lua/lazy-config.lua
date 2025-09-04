@@ -13,13 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'maxmx03/solarized.nvim',
+        'webhooked/kanso.nvim',
         dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('solarized')
+            vim.cmd.colorscheme('kanso')
         end
     },
     {
