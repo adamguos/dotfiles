@@ -13,13 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'vague2k/vague.nvim',
+        'maxmx03/solarized.nvim',
         dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('vague')
+            vim.cmd.colorscheme('solarized')
         end
     },
     {
