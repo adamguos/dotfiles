@@ -13,13 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'mcauley-penney/techbase.nvim',
+        'ericdwhite/overtones.nvim',
         dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
-        config = function()
+        config = function(_, opts)
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('techbase')
+            vim.cmd.colorscheme('overtones')
         end
     },
     {

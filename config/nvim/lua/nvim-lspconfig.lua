@@ -53,20 +53,16 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- Configure wgsl filetype
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-        pattern = "*.wgsl",
-        callback = function()
-                vim.bo.filetype = "wgsl"
-        end
+vim.lsp.config('*', {
+    capabilities = capabilities
 })
 
--- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.clangd.setup({ capabilities = capabilities })
-lspconfig.pyright.setup({ capabilities = capabilities })
-lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-lspconfig.wgsl_analyzer.setup({ capabilities = capabilities })
+vim.lsp.config.lua = {
+    cmd = { 'lua-language-server' },
+    filetypes = { 'lua' }
+}
+
+vim.lsp.enable({'lua'})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
