@@ -16,13 +16,3 @@ vim.opt.cc = '80'
 vim.opt.cursorline = true
 
 require('lazy-config')
-
-vim.api.nvim_create_autocmd({'BufWritePost'}, {
-    pattern = '*.tex',
-    command = '!pdflatex %'
-});
-
-vim.api.nvim_create_autocmd({'BufWritePost'}, {
-    pattern = '*.md',
-    command = '!pandoc "%" -o "%:r.html"'
-});
