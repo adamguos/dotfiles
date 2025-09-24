@@ -13,13 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'ericdwhite/overtones.nvim',
+        'datsfilipe/vesper.nvim',
         dependencies = { 'rktjmp/lush.nvim' },
         lazy = false,
         priority = 1000,
         config = function(_, opts)
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('overtones')
+            vim.cmd.colorscheme('vesper')
         end
     },
     {
