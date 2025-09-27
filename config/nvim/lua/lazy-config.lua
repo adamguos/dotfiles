@@ -13,13 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'datsfilipe/vesper.nvim',
-        dependencies = { 'rktjmp/lush.nvim' },
+        'nyoom-engineering/oxocarbon.nvim',
         lazy = false,
         priority = 1000,
-        config = function(_, opts)
+        config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('vesper')
+            vim.cmd.colorscheme('oxocarbon')
         end
     },
     {
