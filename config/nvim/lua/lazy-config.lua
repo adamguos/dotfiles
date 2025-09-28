@@ -13,12 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'nyoom-engineering/oxocarbon.nvim',
+        'yorumicolors/yorumi.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('oxocarbon')
+            vim.cmd.colorscheme('yorumi')
         end
     },
     {
