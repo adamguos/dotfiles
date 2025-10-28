@@ -13,12 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'thesimonho/kanagawa-paper.nvim',
+        'nyoom-engineering/oxocarbon.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('kanagawa-paper')
+            vim.cmd.colorscheme('oxocarbon')
         end
     },
     {
