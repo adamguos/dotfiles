@@ -15,8 +15,6 @@ vim.opt.termguicolors = true
 vim.opt.cc = '80'
 vim.opt.cursorline = true
 
--- require('lazy-config')
-
 --
 -- LSP
 --
@@ -29,6 +27,17 @@ vim.lsp.config('basedpyright', {
 vim.lsp.enable({
     'basedpyright'
 })
+
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 
 --
 -- Plugins
@@ -72,7 +81,15 @@ require("lazy").setup({
     },
     {
         'lewis6991/gitsigns.nvim',
-        config = function() require('gitsigns').setup() end
+        config = function()
+            require('gitsigns').setup({
+                on_attach = function(bufnr)
+                    local gitsigns = require('gitsigns')
+
+                    vim.keymap.set('n', '<leader>hr', gitsigns.reset_hunk)
+                end
+            })
+        end
     },
     {
         'nvim-lualine/lualine.nvim',
