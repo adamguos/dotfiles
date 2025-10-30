@@ -1,4 +1,4 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -9,35 +9,38 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.hlsearch = true
 vim.opt.breakindent = true
-vim.opt.showbreak = '>>  '
-vim.opt.mouse = ''
+vim.opt.showbreak = ">>  "
+vim.opt.mouse = ""
 vim.opt.termguicolors = true
-vim.opt.cc = '80'
+vim.opt.cc = "80"
 vim.opt.cursorline = true
 
 --
 -- LSP
 --
 
-vim.lsp.config('basedpyright', {
-    cmd = { 'basedpyright-langserver', '--stdio' },
-    filetypes = { 'python' }
+vim.lsp.config("basedpyright", {
+    cmd = { "basedpyright-langserver", "--stdio" },
+    filetypes = { "python" }
 })
 
-vim.lsp.enable({
-    'basedpyright'
+vim.lsp.config("bash-language-server", {
+    cmd = { "bash-language-server", "start" },
+    filetypes = { "bash", "sh" }
 })
 
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
-vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+vim.lsp.enable({ "basedpyright", "bash-language-server" })
+
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+vim.keymap.set("n", "gr", vim.lsp.buf.references)
 
 --
 -- Plugins
@@ -58,124 +61,134 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'folke/tokyonight.nvim',
+        "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = 'dark'
-            vim.cmd.colorscheme('tokyonight-storm')
+            vim.o.background = "dark"
+            vim.cmd.colorscheme("tokyonight-storm")
         end
     },
     {
-        'adamguos/tmuxcolors.nvim',
+        "adamguos/tmuxcolors.nvim",
     },
     {
-        'akinsho/bufferline.nvim',
+        "akinsho/bufferline.nvim",
         config = function()
-            require('bufferline').setup({
+            require("bufferline").setup({
                 options = {
-                    numbers = 'buffer_id'
+                    numbers = "buffer_id"
                 }
             })
         end
     },
     {
-        'lewis6991/gitsigns.nvim',
+        "hedyhli/outline.nvim",
         config = function()
-            require('gitsigns').setup({
-                on_attach = function(bufnr)
-                    local gitsigns = require('gitsigns')
+            vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>")
 
-                    vim.keymap.set('n', '<leader>hr', gitsigns.reset_hunk)
+            require("outline").setup()
+        end
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup({
+                on_attach = function(bufnr)
+                    local gitsigns = require("gitsigns")
+
+                    vim.keymap.set("n", "<leader>hr", gitsigns.reset_hunk)
                 end
             })
         end
     },
     {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        "nvim-lualine/lualine.nvim",
+        requires = { "nvim-tree/nvim-web-devicons", opt = true },
         config = function()
-            require('lualine').setup({
+            require("lualine").setup({
                 options = {
                     section_separators = {
-                        left = ' ',
-                        right = ' '
+                        left = " ",
+                        right = " "
                     }
                 },
                 sections = {
                     lualine_b = {
-                        { 'branch', color = 'Normal' },
-                        { 'diff', color = 'Normal' },
-                        { 'diagnostics', color = 'Normal' }
+                        { "branch", color = "Normal" },
+                        { "diff", color = "Normal" },
+                        { "diagnostics", color = "Normal" }
                     },
                     lualine_c = {
-                        { 'filename', color = 'Normal' }
+                        { "filename", color = "Normal" }
                     },
                     lualine_x = {
-                        { 'encoding', color = 'Normal' },
-                        { 'fileformat', color = 'Normal' },
-                        { 'filetype', color = 'Normal' }
+                        { "encoding", color = "Normal" },
+                        { "fileformat", color = "Normal" },
+                        { "filetype", color = "Normal" }
                     },
                     lualine_y = {
-                        { 'progress', color = 'Normal' }
+                        { "progress", color = "Normal" }
                     }
                 }
-            });
+            })
 
-            vim.api.nvim_set_hl(0, 'lualine_c_command', { link = 'Normal' });
-            vim.api.nvim_set_hl(0, 'lualine_c_inactive', { link = 'Normal' });
-            vim.api.nvim_set_hl(0, 'lualine_c_insert', { link = 'Normal' });
-            vim.api.nvim_set_hl(0, 'lualine_c_normal', { link = 'Normal' });
-            vim.api.nvim_set_hl(0, 'lualine_c_replace', { link = 'Normal' });
-            vim.api.nvim_set_hl(0, 'lualine_c_terminal', { link = 'Normal' });
-            vim.api.nvim_set_hl(0, 'lualine_c_visual', { link = 'Normal' });
+            vim.api.nvim_set_hl(0, "lualine_c_command", { link = "Normal" })
+            vim.api.nvim_set_hl(0, "lualine_c_inactive", { link = "Normal" })
+            vim.api.nvim_set_hl(0, "lualine_c_insert", { link = "Normal" })
+            vim.api.nvim_set_hl(0, "lualine_c_normal", { link = "Normal" })
+            vim.api.nvim_set_hl(0, "lualine_c_replace", { link = "Normal" })
+            vim.api.nvim_set_hl(0, "lualine_c_terminal", { link = "Normal" })
+            vim.api.nvim_set_hl(0, "lualine_c_visual", { link = "Normal" })
         end
     },
     {
-        'nvim-telescope/telescope.nvim',
-        branch = '0.1.x',
-        dependencies = { 'nvim-lua/plenary.nvim' },
+        "nvim-telescope/telescope.nvim",
+        branch = "0.1.x",
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            local builtin = require('telescope.builtin')
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-            vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+            local builtin = require("telescope.builtin")
+            vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+            vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+            vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+            vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
         end
     },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function ()
-            require('nvim-treesitter.configs').setup({
+            require("nvim-treesitter.configs").setup({
                 auto_install = true,
                 highlight = { enable = true },
             })
         end
     },
     {
-        'psliwka/termcolors.nvim'
+        "psliwka/termcolors.nvim"
     },
     {
-        'saghen/blink.cmp',
-        version = '1.*',
+        "saghen/blink.cmp",
+        version = "1.*",
         opts = {
             cmdline = {
-                keymap = { preset = 'inherit' },
+                keymap = { preset = "inherit" },
                 completion = { menu = { auto_show = true } },
             },
         },
     },
     {
-        'stevearc/oil.nvim',
+        "stevearc/oil.nvim",
         config = function()
-            vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+            vim.keymap.set("n", "-", "<CMD>Oil<CR>", {
+                desc = "Open parent directory"
+            })
 
-            require('oil').setup({
+            require("oil").setup({
                 view_options = {
                     show_hidden = true
                 }
             })
         end
     },
-});
+})
