@@ -58,12 +58,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        'EdenEast/nightfox.nvim',
+        'folke/tokyonight.nvim',
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = 'dark'
-            vim.cmd.colorscheme('carbonfox')
+            vim.cmd.colorscheme('tokyonight-storm')
         end
     },
     {

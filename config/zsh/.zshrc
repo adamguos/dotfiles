@@ -1,4 +1,3 @@
-# config_file_path=~/.zshrc
 PROMPT="%F{red}%~ > %f"
 
 alias ll='ls -ahl --color=auto'
@@ -25,8 +24,8 @@ compinit
 
 HISTDUP=erase
 HISTFILE=~/.zsh_history
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt appendhistory
 setopt incappendhistory
 setopt sharehistory
@@ -53,7 +52,7 @@ source <(fzf --zsh)
 # Bindings
 #
 
-bindkey '^w' autosuggest-accept
+bindkey '^y' autosuggest-accept
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
