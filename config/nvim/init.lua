@@ -61,12 +61,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "folke/tokyonight.nvim",
+        "bringsrain/strawberry",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("tokyonight-storm")
+            vim.cmd.colorscheme("strawberry-dark")
         end
     },
     {
