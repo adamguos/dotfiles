@@ -8,6 +8,11 @@ export EDITOR=nvim
 export PATH=$HOME/.local/bin:$PATH
 export VISUAL=nvim
 
+if which gsettings >/dev/null 2>&1; then
+    gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 22
+    gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+fi
+
 #
 # Completion
 #
