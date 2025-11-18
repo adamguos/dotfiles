@@ -61,12 +61,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "rebelot/kanagawa.nvim",
+        "nyoom-engineering/oxocarbon.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = "light"
-            vim.cmd.colorscheme("kanagawa")
+            vim.o.background = "dark"
+            vim.cmd.colorscheme("oxocarbon")
         end
     },
     {
