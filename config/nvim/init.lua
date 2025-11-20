@@ -61,12 +61,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "nyoom-engineering/oxocarbon.nvim",
+        "xero/miasma.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oxocarbon")
+            vim.cmd.colorscheme("miasma")
         end
     },
     {
