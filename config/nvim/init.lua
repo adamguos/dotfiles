@@ -61,12 +61,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "atelierbram/Base2Tone-nvim",
+        "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("base2tone_porch_dark")
+            vim.cmd.colorscheme("tokyonight-night")
         end
     },
     {
