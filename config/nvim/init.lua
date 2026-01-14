@@ -61,12 +61,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "aethersyscall/AetherAmethyst.nvim",
+        "aidyak/tokusa",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("aetheramethyst-eclipse")
+            vim.cmd.colorscheme("tokusa")
         end
     },
     {
