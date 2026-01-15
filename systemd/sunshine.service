@@ -5,11 +5,12 @@ Description=Sunshine game stream host for Moonlight
 After=network.target
 
 [Service]
-Type=simple
-User=adam
+Environment="PATH=/home/adam/.cargo/bin:/home/adam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
 ExecStart=sunshine
 Restart=always
 RestartSec=5
+Type=simple
+User=adam
 
 [Install]
 WantedBy=multi-user.target
