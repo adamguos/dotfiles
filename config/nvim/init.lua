@@ -67,7 +67,8 @@ require("lazy").setup({
         config = function()
             vim.o.background = "dark"
             require("bebop").setup({
-                preset = "faye"
+                preset = "faye",
+                terminal_colors = true
             })
             vim.cmd.colorscheme("bebop")
         end
