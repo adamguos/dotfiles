@@ -61,16 +61,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "ATTron/bebop.nvim",
+        "aidyak/tokusa",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            require("bebop").setup({
-                preset = "faye",
-                terminal_colors = true
-            })
-            vim.cmd.colorscheme("bebop")
+            vim.cmd.colorscheme("tokusa")
         end
     },
     {
