@@ -5,8 +5,9 @@ alias ll='ls -ahl --color=auto'
 bindkey -v
 
 export EDITOR=nvim
-export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
 export VISUAL=nvim
 
 if which gsettings >/dev/null 2>&1; then
