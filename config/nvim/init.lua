@@ -29,7 +29,12 @@ vim.lsp.config("bash-language-server", {
     filetypes = { "bash", "sh" }
 })
 
-vim.lsp.enable({ "basedpyright", "bash-language-server" })
+vim.lsp.config("gopls", {
+    cmd = { "gopls" },
+    filetypes = { "go" }
+})
+
+vim.lsp.enable({ "basedpyright", "bash-language-server", "gopls" })
 
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
