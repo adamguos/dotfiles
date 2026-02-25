@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "yonatan-perel/lake-dweller.nvim",
+        "oxidescheme/nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("lake-dweller")
+            vim.cmd.colorscheme("oxide")
         end
     },
     {
