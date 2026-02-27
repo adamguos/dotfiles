@@ -71,7 +71,7 @@ require("lazy").setup({
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("mfd-stealth")
+            vim.cmd.colorscheme("mfd-amber")
         end
     },
     {

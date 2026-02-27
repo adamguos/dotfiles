@@ -1,3 +1,4 @@
 .zcompdump
 config/tmux/plugins/
+kitty.conf.bak
 lazy-lock.json
