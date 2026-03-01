@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "kungfusheep/mfd.nvim",
+        "rockerBOO/boo-colorscheme-nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("mfd-amber")
+            vim.cmd.colorscheme("crimson_moonlight")
         end
     },
     {
