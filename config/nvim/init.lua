@@ -71,7 +71,7 @@ require("lazy").setup({
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("crimson_moonlight")
+            vim.cmd.colorscheme("sunset_cloud")
         end
     },
     {
