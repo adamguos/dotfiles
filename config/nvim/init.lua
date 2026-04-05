@@ -71,7 +71,7 @@ require("lazy").setup({
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-abyss")
+            vim.cmd.colorscheme("oasis-scorpion")
         end
     },
     {
@@ -149,7 +149,7 @@ require("lazy").setup({
     },
     {
         "nvim-telescope/telescope.nvim",
-        branch = "0.1.x",
+        branch = "master",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             local builtin = require("telescope.builtin")
@@ -161,9 +161,10 @@ require("lazy").setup({
     },
     {
         "nvim-treesitter/nvim-treesitter",
+        branch = "main",
         build = ":TSUpdate",
         config = function ()
-            require("nvim-treesitter.configs").setup({
+            require("nvim-treesitter").setup({
                 auto_install = true,
                 highlight = { enable = true },
             })
