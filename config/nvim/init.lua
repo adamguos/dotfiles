@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "uhs-robert/oasis.nvim",
+        "kungfusheep/mfd.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-scorpion")
+            vim.cmd.colorscheme("mfd-stealth")
         end
     },
     {
