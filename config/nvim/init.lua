@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "kungfusheep/mfd.nvim",
+        "xero/miasma.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("mfd-stealth")
+            vim.cmd.colorscheme("miasma")
         end
     },
     {
