@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "xero/miasma.nvim",
+        "uhs-robert/oasis.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("miasma")
+            vim.cmd.colorscheme("oasis-abyss")
         end
     },
     {
@@ -157,17 +157,6 @@ require("lazy").setup({
             vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
             vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
             vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-        end
-    },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        branch = "main",
-        build = ":TSUpdate",
-        config = function ()
-            require("nvim-treesitter").setup({
-                auto_install = true,
-                highlight = { enable = true },
-            })
         end
     },
     {
