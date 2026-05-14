@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "uhs-robert/oasis.nvim",
+        "vimcolorschemes/olive-crt.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-abyss")
+            vim.cmd.colorscheme("olive-crt")
         end
     },
     {
