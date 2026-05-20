@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "vimcolorschemes/olive-crt.nvim",
+        "xero/miasma.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("olive-crt")
+            vim.cmd.colorscheme("miasma")
         end
     },
     {
