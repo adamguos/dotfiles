@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "slugbyte/lackluster.nvim",
+        "uhs-robert/oasis.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("lackluster")
+            vim.cmd.colorscheme("oasis-twilight")
         end
     },
     {
