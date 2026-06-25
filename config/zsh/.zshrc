@@ -3,6 +3,7 @@ PROMPT="%F{red}%~ > %f"
 alias ll='ls -ahl --color=auto'
 
 bindkey -v
+set -k
 
 export EDITOR=nvim
 export PATH=$HOME/.cargo/bin:$PATH
