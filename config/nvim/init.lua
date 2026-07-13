@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "edeneast/nightfox.nvim",
+        "ellisonleao/gruvbox.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = "dark"
-            vim.cmd.colorscheme("dayfox")
+            vim.o.background = "light"
+            vim.cmd.colorscheme("gruvbox")
         end
     },
     {
