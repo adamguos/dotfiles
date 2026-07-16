@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "ellisonleao/gruvbox.nvim",
+        "ribru17/bamboo.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "light"
-            vim.cmd.colorscheme("gruvbox")
+            vim.cmd.colorscheme("bamboo")
         end
     },
     {
