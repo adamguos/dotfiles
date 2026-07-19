@@ -66,12 +66,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "ribru17/bamboo.nvim",
+        "uhs-robert/oasis.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "light"
-            vim.cmd.colorscheme("bamboo")
+            vim.cmd.colorscheme("oasis-abyss")
         end
     },
     {
