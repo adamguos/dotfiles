@@ -66,15 +66,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "uhs-robert/oasis.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "light"
-            require("oasis").setup({
-                light_intensity = 5
-            })
-            vim.cmd.colorscheme("oasis-abyss")
+            vim.cmd.colorscheme("catppuccin-latte")
         end
     },
     {
