@@ -66,13 +66,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        "rose-pine/neovim",
+        name = "rose-pine",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "light"
-            vim.cmd.colorscheme("catppuccin-latte")
+            vim.cmd.colorscheme("rose-pine")
         end
     },
     {
