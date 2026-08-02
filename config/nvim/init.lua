@@ -66,12 +66,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "uhs-robert/oasis.nvim",
+        "Aejkatappaja/cendre",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-sol")
+            require("cendre").setup({
+                background = "hard",
+                italic = true
+            })
+            vim.cmd.colorscheme("cendre")
         end
     },
     {
