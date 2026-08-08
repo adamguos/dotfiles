@@ -66,16 +66,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "Aejkatappaja/cendre",
+        "rockerBOO/boo-colorscheme-nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            require("cendre").setup({
-                background = "hard",
-                italic = true
+            require("boo-colorscheme").use({
+                italic = true,
+                theme = "forest_stream"
             })
-            vim.cmd.colorscheme("cendre")
+            -- vim.cmd.colorscheme("cendre")
         end
     },
     {
