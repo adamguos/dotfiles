@@ -73,7 +73,7 @@ require("lazy").setup({
             vim.o.background = "dark"
             require("boo-colorscheme").use({
                 italic = true,
-                theme = "forest_stream"
+                theme = "radioactive_waste"
             })
             -- vim.cmd.colorscheme("cendre")
         end
