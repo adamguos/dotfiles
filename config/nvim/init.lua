@@ -66,16 +66,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "rockerBOO/boo-colorscheme-nvim",
+        "nyoom-engineering/oxocarbon.nvim",
+        build = false,
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            require("boo-colorscheme").use({
-                italic = true,
-                theme = "radioactive_waste"
-            })
-            -- vim.cmd.colorscheme("cendre")
+            vim.cmd.colorscheme("oxocarbon")
         end
     },
     {
