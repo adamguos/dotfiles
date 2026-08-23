@@ -66,13 +66,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "Mofiqul/dracula.nvim",
+        "WeiTing1991/suannhai.nvim",
         build = false,
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("dracula")
+            vim.cmd.colorscheme("suannhai-jiufen")
         end
     },
     {
