@@ -66,13 +66,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "WeiTing1991/suannhai.nvim",
+        "uhs-robert/oasis.nvim",
         build = false,
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("suannhai-jiufen")
+            vim.cmd.colorscheme("oasis-night")
         end
     },
     {
