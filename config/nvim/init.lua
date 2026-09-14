@@ -66,13 +66,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "uhs-robert/oasis.nvim",
+        "samharju/synthweave.nvim",
         build = false,
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-night")
+            vim.cmd.colorscheme("synthweave")
         end
     },
     {
