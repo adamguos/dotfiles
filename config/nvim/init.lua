@@ -73,9 +73,9 @@ require("lazy").setup({
         config = function()
             vim.o.background = "light"
             require("oasis").setup({
-                light_intensity = 3
+                light_intensity = 5
             })
-            vim.cmd.colorscheme("oasis-cactus")
+            vim.cmd.colorscheme("oasis-abyss")
 
         end
     },
