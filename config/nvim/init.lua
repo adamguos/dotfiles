@@ -71,11 +71,11 @@ require("lazy").setup({
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = "light"
+            vim.o.background = "dark"
             require("oasis").setup({
                 light_intensity = 5
             })
-            vim.cmd.colorscheme("oasis-abyss")
+            vim.cmd.colorscheme("oasis-scorpion")
 
         end
     },
