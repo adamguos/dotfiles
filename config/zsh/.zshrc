@@ -5,10 +5,15 @@ alias ll='ls -ahl --color=auto'
 bindkey -v
 set -k
 
+export_path_dedup() {
+    [[ $PATH != *"$1:"* ]] && export PATH=$1:$PATH
+}
+
 export EDITOR=nvim
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
 export VISUAL=nvim
+export_path_dedup $HOME/.cargo/bin
+export_path_dedup $HOME/.local/bin
+export_path_dedup /usr/sbin
 
 KEYTIMEOUT=1
 
