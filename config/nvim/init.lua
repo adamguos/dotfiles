@@ -66,14 +66,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "uhs-robert/oasis.nvim",
+        "zenbones-theme/zenbones.nvim",
         build = false,
+        dependencies = "rktjmp/lush.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-scorpion")
-
+            vim.cmd.colorscheme("forestbones")
         end
     },
     {
