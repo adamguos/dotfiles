@@ -72,7 +72,7 @@ require("lazy").setup({
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("oasis-moonlight")
+            vim.cmd.colorscheme("oasis-scorpion")
 
         end
     },
