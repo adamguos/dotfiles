@@ -66,14 +66,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "zenbones-theme/zenbones.nvim",
+        "ernesxavier/biomes.nvim",
         build = false,
         dependencies = "rktjmp/lush.nvim",
         lazy = false,
         priority = 1000,
         config = function()
             vim.o.background = "dark"
-            vim.cmd.colorscheme("forestbones")
+            vim.cmd.colorscheme("biomes-deep_dark")
         end
     },
     {
