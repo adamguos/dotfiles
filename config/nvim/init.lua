@@ -72,8 +72,8 @@ require("lazy").setup({
         lazy = false,
         priority = 1000,
         config = function()
-            vim.o.background = "dark"
-            vim.cmd.colorscheme("biomes-deep_dark")
+            vim.o.background = "light"
+            vim.cmd.colorscheme("biomes-cherry")
         end
     },
     {
